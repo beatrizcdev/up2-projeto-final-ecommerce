@@ -1,0 +1,52 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 3%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+    border-radius: 0 0 15px 15px;
+    box-sizing: border-box;
+
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    flex-grow: 1;
+    flex-basis: 0;
+        
+}
+
+nav ul{
+    display: flex;
+    gap: 5%;
+    font-size: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.logotipo{
+    width: 60px;
+
+}
+
+.opcoes-extra{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+
+.opcoes-extra img {
+    width: 40px;
+    height: 40px;
+}
