@@ -10,7 +10,6 @@ section.carrossel {
 .carrossel-content{
     width: 400%;
     height: 250px;
-    /*height: auto*/
     display: flex;
     transition: transform 0.5 ease;
 }
@@ -24,7 +23,6 @@ section.carrossel {
     height: auto;
     position: relative;
     text-align: center;
-    /*transition: 0.5s;*/
 }
 
 .nav-manual, .nav-auto{

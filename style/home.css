@@ -6,12 +6,27 @@
     padding: 0; 
     padding-top: 50px;
 }
-main{
+.main-home{
     width: 100%;
     padding-top: 50px;
     margin: 0;
     background: linear-gradient(to bottom, #ffffff, #156103);
     padding: 0;
+}
+
+.propagandas{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 5%;
+    justify-items: center;
+}
+
+.container{
+    background-color: bisque;
+    border: 2px solid rgb(208, 179, 144);
+    width: 80%;
+    border-radius: 20px;
+    padding: 10px;
 }
 
 
