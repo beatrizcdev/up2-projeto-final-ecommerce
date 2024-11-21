@@ -1,0 +1,77 @@
+section.carrossel {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    padding: 0 !important;
+    overflow: hidden;
+    position: relative;
+}
+
+.carrossel-content{
+    width: 400%;
+    height: 250px;
+    display: flex;
+    transition: transform 0.5 ease;
+}
+
+.carrossel-content input{
+    display: none;
+}
+
+.carrossel-box{
+    width: 25%;
+    height: auto;
+    position: relative;
+    text-align: center;
+}
+
+.nav-manual, .nav-auto{
+    position: absolute;
+    width: 100%;
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-manual .manual-btn, .nav-auto div{
+    border: 2px solid #156103;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.nav-manual .manual-btn:not(:last-child), .nav-auto div:not(:last-child){
+    margin-right: 10px;
+}
+
+.nav-manual .manual-btn:hover{
+    background-color: #156103;
+}
+
+.img-carrossel {
+    width: 100px; 
+    height: 100px; 
+    background-color: rgb(255, 128, 0);
+    border-radius: 50%;
+    margin: 20px;
+    padding: 10px;
+}
+
+#radio1:checked~ .nav-auto .auto-btn1, #radio2:checked~ .nav-auto .auto-btn2, #radio3:checked~ .nav-auto .auto-btn3{
+    background-color: #156103;
+}
+
+#radio1:checked ~ .primeiro{
+    margin-left: 0%;
+}
+
+#radio2:checked ~ .primeiro{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .primeiro{
+    margin-left: -50%;
+}
+

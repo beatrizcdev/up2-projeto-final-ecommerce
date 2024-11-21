@@ -10,7 +10,7 @@
 <body>
 
     <header>
-        <img src="./imagens/logotipo.png" alt="logo" class="logotipo" width="20px">
+        <img src="./imagens/mundo-exotico-logotipo.svg" alt="logo" class="logotipo" width="20px">
 
         <nav>
             <ul>
@@ -21,13 +21,85 @@
         </nav>
 
         <div class="opcoes-extra">
-            <a href="./Paginas/perfil.html"><img src="./imagens/perfil.png" alt="perfil" class="opcoes-extra"></a>
-            <a href="./Paginas/carrinho.html"><img src="./imagens/carrinho.png" class="opcoes-extra"></a>
+            <a href="./Paginas/perfil.html"><img src="./imagens/header-perfl.svg" alt="perfil" class="opcoes-extra"></a>
+            <a href="./Paginas/carrinho.html"><img src="./imagens/header-carrinho.svg" class="opcoes-extra"></a>
         </div>
     </header>
-    <main>
-       <img src="./imagens/banner-homepage.png" alt="banner homepage" id="banner-home">
+    <main class="main-home">
+       <img src="./imagens/home-banner-main.svg" alt="banner homepage" id="banner-home">
     </main>
+
+    <section class="carrossel">
+        <div class="carrossel-content">
+
+            <input type="radio" name="radio" id="radio1">
+            <input type="radio" name="radio" id="radio2">
+            <input type="radio" name="radio" id="radio3">
+
+            <div class="carrossel-box primeiro">
+
+                <img src="./imagens/home-tartaruga.svg" alt="tartaruga" class="img-carrossel">
+                <img src="./imagens/home-lagarto.svg" alt="lagarto" class="img-carrossel">
+                <img id="home-papagaio" src="./imagens/home-papagaio.svg" alt="papagaio" class="img-carrossel">
+
+            </div>
+
+            <div class="carrossel-box">
+
+                <img src="./imagens/home-lagarto.svg" alt="lagarto" class="img-carrossel">
+                <img id="home-papagaio" src="./imagens/home-papagaio.svg" alt="papagaio" class="img-carrossel">
+                <img src="./imagens/home-peixe.svg" alt="peixe" class="img-carrossel">
+                
+            </div>
+
+            <div class="carrossel-box">
+
+                <img id="home-papagaio" src="./imagens/home-papagaio.svg" alt="papagaio" class="img-carrossel">
+                <img src="./imagens/home-peixe.svg" alt="peixe" class="img-carrossel">
+                <img src="./imagens/home-aranha.svg" alt="aranha" class="img-carrossel">
+                
+            </div>
+
+            <div class="nav-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+            </div>
+
+            <div class="nav-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="propagandas">
+
+        <a href="">
+            <div class="container">
+                <img src="#" alt="Ração de peixe">
+                <h3>Ração de Peixe com até 50% de desconto.</h3>
+            </div>
+        </a>
+
+        <a href="">
+            <div class="container">
+                <img src="#" alt="Ração de peixe">
+                <h3>Ração de Peixe com até 50% de desconto.</h3>
+            </div>
+        </a>
+
+        <a href="">
+            <div class="container">
+                <img src="#" alt="Ração de peixe">
+                <h3>Ração de Peixe com até 50% de desconto.</h3>
+            </div>
+        </a>
+    </section>
     
+    
+    <script src="./script.js"></script>
 </body>
 </html>
