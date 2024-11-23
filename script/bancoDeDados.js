@@ -359,7 +359,6 @@ const produtos = [
         imagem: '', 
         descricao: "As salamandras são anfíbios caracterizados por sua pele lisa e úmida. Sua alimentação inclui insetos e pequenos invertebrados, e elas vivem em ambientes aquáticos ou úmidos." 
     },
-    const animais = [
     { 
         id: "41", 
         titulo: "Crocodilo-do-Nilo", 
