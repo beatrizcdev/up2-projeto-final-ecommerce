@@ -21,8 +21,72 @@
         </nav>
 
         <div class="opcoes-extra">
-            <a href="./Paginas/perfil.html"><img src="./imagens/header-perfl.svg" alt="perfil" class="opcoes-extra"></a>
-            <a href="./Paginas/carrinho.html"><img src="./imagens/header-carrinho.svg" class="opcoes-extra"></a>
+            <a href="./Paginas/perfil.html"><img src="./imagens/header-perfil.svg" alt="perfil" class="opcoes-extra"></a>
+            <button id="carrinho_open">
+                <a href="javascript:void(0)" class="link__quantity">
+                    <img src="./imagens/header-carrinho.svg" class="opcoes-extra"></a>
+                </a>
+                </button>
+                <div id="fade" class="hide"></div>
+                <div id="carrinho_modal" class="hide">
+                  <div class="carrinho_header">
+                    <h2 id="carrinho_title">Seu carrinho</h2>
+                    <img src="./imagens/X.svg" alt="" class="carrinho_out">
+                  </div>
+                  <div class="carrinho_container">
+                  <div class="carrinho_main">
+                    <p id="carrinho_quantidadeItens">0 ítens</p>
+                    <button class="carrinho_excluirTudo">Excluir tudo</button>
+                  </div>
+                  <div class="carrinho_section">
+                    <div class="carrinho_section_parte1">
+                      <div class="carrinho_section_baseProduto">
+                        <img src="./image/product-01.png" alt="" id="carrinho_imagem_produto">
+                        <div class="carrinho_produtoDescricao">
+                          <p>Nome do produto</p>
+                          <div class="carrinho_tag">
+                            <img src="./image/plant_carrinho.svg" alt="" id="carrinho_produtoTagImg">
+                            <span class="carrinho_produtoTagTexto">Vegano</span>
+                          </div>
+                        </div>
+                      </div>
+                        <button type="button" class="carrinho_lixeira">
+                          <img src="./imagens/Trash.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="carrinho_valorProduto">
+                      <h2 id="carrinho_preco_produto">R$ 0,00</h2>
+                      <div class="carrinho_seletorDeQuantidade">
+                        <button class="btn-minus"><img src="./imagens/Minus.svg" alt=""></button>
+                        <span id="carrinho_produto_quantidade">1</span>
+                        <button class="btn-plus">
+                        <img src="./imagens/Plus.svg" alt="">
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                  <div class="carrinho_footer">
+                    <div class="carrinho_tiposValores">
+                      <div id="carrinho_subtotal">
+                        <p>Subtotal</p>
+                        <span>R$ 0,00</span>
+                      </div>
+                      <div id="carrinho_entrega">
+                        <p>Entrega</p>
+                        <span>R$ 0,00</span>
+                      </div>
+                      <div id="carrinho_total">
+                        <p>Total</p>
+                        <span>R$ 0,00</span>
+                      </div>
+                    </div>
+                    <div id="carrinho_finalizarCompra">
+                      <button class="carrinho_finalizarCompra">Finalizar compra</button>
+                    </div>
+                  </div>
+                </div>
+            
         </div>
     </header>
     <main class="main-home">
@@ -99,7 +163,7 @@
         </a>
     </section>
     
-    
+    <script src="./script/carrinho.js"></script>
     <script src="./script/carrossel.js"></script>
 </body>
 </html>
