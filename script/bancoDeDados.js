@@ -627,5 +627,221 @@ const produtos = [
         tipo: "comida", 
         imagem: '', 
         descricao: "Pó de cálcio essencial para a saúde óssea de répteis como serpentes e tartarugas." 
+    },
+    {
+        id: "67",
+        titulo: "Gaiola para Pardal",
+        preco: 50,
+        categoria: "Aves",
+        tipo: "acessório",
+        imagem: '',
+        descricao: "Gaiola ideal para abrigar pardais, proporcionando conforto e segurança."
+    },
+    {
+        id: "67",
+        titulo: "Gaiola para Pardal",
+        preco: 50,
+        categoria: "Aves",
+        tipo: "acessório",
+        imagem: '',
+        descricao: "Gaiola ideal para abrigar pardais, proporcionando conforto e segurança."
+    },
+    {
+        id: "68",
+        titulo: "Comedouro para Sabiá",
+        preco: 15,
+        categoria: "Aves",
+        tipo: "acessório",
+        imagem: '',
+        descricao: "Comedouro para sabiá, perfeito para sementes e frutas."
+    },
+    {
+        id: "69",
+        titulo: "Gaiola para Codorna",
+        preco: 80,
+        categoria: "Aves",
+        tipo: "acessório",
+        imagem: '',
+        descricao: "Gaiola confortável e espaçosa para criar codornas em cativeiro."
+    },
+    {
+        id: "70",
+        titulo: "Pote de Ração para Faisão",
+        preco: 20,
+        categoria: "Aves",
+        tipo: "acessório",
+        imagem: '',
+        descricao: "Pote de ração ideal para alimentar faisões, com compartimento para sementes e grãos."
+    },
+    {
+        id: "71",
+        titulo: "Aquário para Betta",
+        preco: 120,
+        categoria: "Peixes",
+        tipo: "acessório",
+        imagem: '',
+        descricao: "Aquário compacto ideal para bettas, com sistema de filtragem e iluminação."
+    },
+    {
+        id: "72",
+        titulo: "Ração para Neon",
+        preco: 10,
+        categoria: "Peixes",
+        tipo: "comida",
+        imagem: '',
+        descricao: "Ração especial para peixes pequenos como o neon, rica em nutrientes."
+    },
+    {
+        id: "73",
+        titulo: "Filtro para Aquário de Carpas",
+        preco: 250,
+        categoria: "Peixes",
+        tipo: "acessório",
+        imagem: '',
+        descricao: "Filtro de alta eficiência para manter o aquário de carpas limpo e saudável."
+    },
+    {
+        id: "74",
+        titulo: "Aquário Decorativo para Peixe-palhaço",
+        preco: 300,
+        categoria: "Peixes",
+        tipo: "acessório",
+        imagem: '',
+        descricao: "Aquário decorativo com tema de recifes, perfeito para peixes-palhaço."
+    },
+    {
+        id: "75",
+        titulo: "Cápsulas de Cálcio para Iguanas",
+        preco: 15,
+        categoria: "Répteis",
+        tipo: "comida",
+        imagem: '',
+        descricao: "Cápsulas ricas em cálcio para fortalecer a saúde óssea de iguanas e outros répteis herbívoros."
+    },
+    {
+        id: "76",
+        titulo: "Lâmpada UV para Répteis",
+        preco: 80,
+        categoria: "Répteis",
+        tipo: "acessório",
+        imagem: '',
+        descricao: "Lâmpada UV indispensável para répteis, auxiliando na absorção de cálcio e saúde geral."
+    },
+    {
+        id: "77",
+        titulo: "Toca de Cerâmica para Camaleão",
+        preco: 60,
+        categoria: "Répteis",
+        tipo: "acessório",
+        imagem: '',
+        descricao: "Toca de cerâmica que proporciona um ambiente seguro e confortável para camaleões."
+    },
+    {
+        id: "78",
+        titulo: "Terrário para Répteis de Pequeno Porte",
+        preco: 400,
+        categoria: "Répteis",
+        tipo: "acessório",
+        imagem: '',
+        descricao: "Terrário espaçoso com sistema de ventilação ideal para répteis de pequeno porte."
+    },
+    {
+        id: "79",
+        titulo: "Terrário para Aracnídeos",
+        preco: 150,
+        categoria: "Aracnídeos",
+        tipo: "acessório",
+        imagem: '',
+        descricao: "Terrário compacto e ventilado, ideal para criar aranhas e escorpiões com segurança."
+    },
+    {
+        id: "80",
+        titulo: "Pinça para Alimentação de Aracnídeos",
+        preco: 25,
+        categoria: "Aracnídeos",
+        tipo: "acessório",
+        imagem: '',
+        descricao: "Pinça longa e segura para manipular alimentos vivos ou objetos no terrário."
+    },
+    {
+        id: "81",
+        titulo: "Substrato para Terrários de Aracnídeos",
+        preco: 40,
+        categoria: "Aracnídeos",
+        tipo: "acessório",
+        imagem: '',
+        descricao: "Substrato natural para manter a umidade e conforto no ambiente de aracnídeos."
+    },
+    {
+        id: "82",
+        titulo: "Aquário para Carpas",
+        preco: 500,
+        categoria: "Peixes",
+        tipo: "acessório",
+        imagem: '',
+        descricao: "Aquário grande e resistente, ideal para manter carpas com amplo espaço para nado."
+    },
+    {
+        id: "83",
+        titulo: "Ração Premium para Goldfish",
+        preco: 30,
+        categoria: "Peixes",
+        tipo: "comida",
+        imagem: '',
+        descricao: "Ração de alta qualidade especialmente desenvolvida para peixes ornamentais como o goldfish."
+    },
+    {
+        id: "84",
+        titulo: "Decoração de Coral para Aquários",
+        preco: 100,
+        categoria: "Peixes",
+        tipo: "acessório",
+        imagem: '',
+        descricao: "Decoração realista de coral para aquários, ideal para peixes como o peixe-palhaço."
+    },
+    {
+        id: "85",
+        titulo: "Filtro de Água para Aquários de Tetras",
+        preco: 200,
+        categoria: "Peixes",
+        tipo: "acessório",
+        imagem: '',
+        descricao: "Filtro eficiente para manter aquários de água doce com tetras limpos e saudáveis."
+    },
+    {
+        id: "86",
+        titulo: "Casinha Flutuante para Cágados",
+        preco: 150,
+        categoria: "Cágados",
+        tipo: "acessório",
+        imagem: '',
+        descricao: "Casinha flutuante para cágados, ideal para descanso e conforto em aquaterrários."
+    },
+    {
+        id: "87",
+        titulo: "Ração Balanceada para Cágados",
+        preco: 20,
+        categoria: "Cágados",
+        tipo: "comida",
+        imagem: '',
+        descricao: "Ração rica em nutrientes, especialmente formulada para a dieta equilibrada de cágados."
+    },
+    {
+        id: "88",
+        titulo: "Lâmpada de Aquecimento para Cágados",
+        preco: 80,
+        categoria: "Cágados",
+        tipo: "acessório",
+        imagem: '',
+        descricao: "Lâmpada de aquecimento para criar um ambiente confortável e saudável para cágados."
+    },
+    {
+        id: "89",
+        titulo: "Filtro para Aquaterrários de Cágados",
+        preco: 250,
+        categoria: "Cágados",
+        tipo: "acessório",
+        imagem: '',
+        descricao: "Filtro eficiente para manter o ambiente aquático de cágados limpo e livre de resíduos."
     }
 ];
