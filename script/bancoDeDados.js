@@ -27,15 +27,6 @@ const produtos = [
         descricao: "O Cágado-pintado é um pequeno réptil que habita rios e lagos da América do Norte. Sua característica marcante são as cores vibrantes e as manchas coloridas em seu casco. Ele é onívoro, alimentando-se de plantas aquáticas, insetos e pequenos peixes. O habitat desse cágado são áreas de água doce com vegetação aquática, e ele é adaptado a climas temperados e subtropicais." 
     },
     { 
-        id: "4", 
-        titulo: "Cágado-de-ouvido-vermelho", 
-        preco: 80, 
-        categoria: "Cágados", 
-        tipo: "animal", 
-        imagem: '', 
-        descricao: "Este cágado é conhecido por suas manchas vermelhas nas laterais da cabeça. Alimenta-se principalmente de plantas aquáticas, frutas e pequenos invertebrados. Seu habitat natural são os rios e lagos de água doce, preferindo ambientes com bastante vegetação e águas calmas. O Cágado-de-ouvido-vermelho se adapta a climas tropicais e subtropicais, onde as temperaturas são constantes e o ambiente é úmido." 
-    },
-    { 
         id: "5", 
         titulo: "Cágado-da-caatinga", 
         preco: 150, 
@@ -43,15 +34,6 @@ const produtos = [
         tipo: "animal", 
         imagem: '', 
         descricao: "O Cágado-da-caatinga é um réptil adaptado a ambientes semiáridos. Ele se alimenta principalmente de plantas de caatinga, frutos e raízes. Esse cágado habita áreas de vegetação esparsa e de clima seco, preferindo áreas com poucas chuvas e temperaturas elevadas durante a maior parte do ano. A Caatinga, seu habitat, é caracterizada por um clima quente e seco, com vegetação adaptada à escassez de água." 
-    },
-    { 
-        id: "6", 
-        titulo: "Cágado-da-amazônia", 
-        preco: 130, 
-        categoria: "Cágados", 
-        tipo: "animal", 
-        imagem: '', 
-        descricao: "O Cágado-da-amazônia é uma espécie nativa da região amazônica, sendo encontrado em rios de água doce e pântanos. Alimenta-se de plantas aquáticas, frutas e pequenos invertebrados. O habitat dessa espécie é marcado por águas tropicais, com temperatura quente e alta umidade. As florestas úmidas e os rios lentos da Amazônia são seu ambiente ideal." 
     },
     { 
         id: "7", 
@@ -79,15 +61,6 @@ const produtos = [
         tipo: "animal", 
         imagem: '', 
         descricao: "Com carapaça mais resistente, o Cágado-de-carapaça-dura é capaz de resistir a predadores naturais em seu habitat. Alimenta-se principalmente de vegetação aquática e pequenos invertebrados. Esse cágado habita lagos e rios de água doce, onde a vegetação aquática é abundante. Ele prefere climas tropicais, com temperaturas altas e umidade elevada, que favorecem seu desenvolvimento." 
-    },
-    { 
-        id: "10", 
-        titulo: "Cágado-mexicano", 
-        preco: 125, 
-        categoria: "Cágados", 
-        tipo: "animal", 
-        imagem: '', 
-        descricao: "Espécie endêmica do México, o Cágado-mexicano é encontrado em lagos e rios com águas frescas. Sua alimentação é composta por plantas aquáticas e pequenos peixes. O habitat natural dessa espécie inclui rios de águas claras e vegetação aquática. O clima quente e seco das regiões do México é perfeito para essa espécie, que se adapta bem ao calor." 
     },
     { 
         id: "11", 
@@ -171,15 +144,6 @@ const produtos = [
         descricao: "A cobra-cipó é uma serpente não venenosa de corpo esguio, comum nas florestas tropicais e subtropicais. Ela se alimenta de pequenos roedores e répteis, e prefere habitats de vegetação densa, como árvores e arbustos." 
     },
     { 
-        id: "20", 
-        titulo: "Tartaruga-das-bermudas", 
-        preco: 350, 
-        categoria: "Répteis", 
-        tipo: "animal", 
-        imagem: '', 
-        descricao: "A tartaruga-das-bermudas é uma espécie marinha em risco de extinção, nativa das Ilhas Bermudas. Ela se alimenta de algas, esponjas e pequenos invertebrados marinhos e vive em águas rasas e recifes de corais." 
-    },
-    { 
         id: "21", 
         titulo: "Canário", 
         preco: 80, 
@@ -198,15 +162,6 @@ const produtos = [
         descricao: "O periquito australiano é uma ave pequena e colorida, originária da Austrália. Sua dieta é baseada em sementes e vegetação, e ele prefere viver em regiões abertas e áreas semiáridas." 
     },
     { 
-        id: "23", 
-        titulo: "Papagaio-do-mangue", 
-        preco: 450, 
-        categoria: "Aves", 
-        tipo: "animal", 
-        imagem: '', 
-        descricao: "O papagaio-do-mangue é uma espécie de ave endêmica da região litorânea brasileira, com penas verdes e vermelhas. Sua alimentação inclui frutas, sementes e folhas. Habita áreas de manguezais e florestas tropicais." 
-    },
-    { 
         id: "24", 
         titulo: "Curió", 
         preco: 120, 
@@ -223,15 +178,6 @@ const produtos = [
         tipo: "animal", 
         imagem: '', 
         descricao: "A cacatua é uma ave exótica conhecida por seu comportamento brincalhão e suas penas em forma de crista. Ela se alimenta de sementes, frutas e nozes, e pode ser encontrada em florestas tropicais e subtropicais." 
-    },
-    { 
-        id: "26", 
-        titulo: "Arara-azul", 
-        preco: 800, 
-        categoria: "Aves", 
-        tipo: "animal", 
-        imagem: '', 
-        descricao: "A arara-azul é uma espécie de papagaio nativa da América do Sul, famosa pela sua plumagem vibrante. Sua dieta inclui frutas, sementes e nozes, e ela habita florestas tropicais e áreas de várzea." 
     },
     { 
         id: "27", 
@@ -360,15 +306,6 @@ const produtos = [
         descricao: "As salamandras são anfíbios caracterizados por sua pele lisa e úmida. Sua alimentação inclui insetos e pequenos invertebrados, e elas vivem em ambientes aquáticos ou úmidos." 
     },
     { 
-        id: "41", 
-        titulo: "Crocodilo-do-Nilo", 
-        preco: 1500, 
-        categoria: "Répteis", 
-        tipo: "animal", 
-        imagem: '', 
-        descricao: "O crocodilo-do-Nilo é uma das maiores espécies de crocodilos, encontrado principalmente na África Subsaariana. Alimenta-se de grandes mamíferos, peixes e aves, vivendo em rios e lagos." 
-    },
-    { 
         id: "42", 
         titulo: "Iguana-verde", 
         preco: 200, 
@@ -538,5 +475,157 @@ const produtos = [
         tipo: "animal", 
         imagem: '', 
         descricao: "O condor é uma ave de rapina de grande porte, encontrada na América do Norte e do Sul. Sua alimentação é composta por carniça, e é uma das aves com maior envergadura de asas, podendo alcançar até 3 metros." 
+    },
+    { 
+        id: "51", 
+        titulo: "Alimento para Répteis Insectívoros", 
+        preco: 30, 
+        categoria: "Répteis", 
+        tipo: "comida", 
+        imagem: '', 
+        descricao: "Ração especial para répteis insectívoros, como tegu e jararaca, rica em proteínas e cálcio." 
+    },
+    { 
+        id: "52", 
+        titulo: "Folhas e Vegetais para Répteis Herbívoros", 
+        preco: 15, 
+        categoria: "Répteis", 
+        tipo: "comida", 
+        imagem: '', 
+        descricao: "Mistura de folhas frescas e vegetais, como couve e alface, para répteis herbívoros como iguanas." 
+    },
+    { 
+        id: "53", 
+        titulo: "Alimento para Cobras e Serpentes", 
+        preco: 25, 
+        categoria: "Répteis", 
+        tipo: "comida", 
+        imagem: '', 
+        descricao: "Alimento específico para cobras, ideal para cobras não-venenosas como a serpente-de-corn." 
+    },
+    { 
+        id: "54", 
+        titulo: "Vermes e Insetos para Répteis", 
+        preco: 20, 
+        categoria: "Répteis", 
+        tipo: "comida", 
+        imagem: '', 
+        descricao: "Alimento com vermes e insetos, adequado para répteis carnívoros, como algumas cobras e lagartos." 
+    },
+    { 
+        id: "55", 
+        titulo: "Ração para Tartarugas", 
+        preco: 40, 
+        categoria: "Répteis", 
+        tipo: "comida", 
+        imagem: '', 
+        descricao: "Ração para tartarugas, rica em cálcio, indicada para tartarugas-das-bermudas." 
+    },
+
+    // Para aves (como papagaio, canário, arara)
+    { 
+        id: "56", 
+        titulo: "Sementes para Aves", 
+        preco: 12, 
+        categoria: "Aves", 
+        tipo: "comida", 
+        imagem: '', 
+        descricao: "Mistura de sementes, ideal para aves como canário e periquito australiano." 
+    },
+    { 
+        id: "57", 
+        titulo: "Frutas Frescas para Aves", 
+        preco: 18, 
+        categoria: "Aves", 
+        tipo: "comida", 
+        imagem: '', 
+        descricao: "Frutas frescas como maçã e banana, adequadas para aves como o papagaio-do-mangue." 
+    },
+    { 
+        id: "58", 
+        titulo: "Alimento para Aves Exóticas", 
+        preco: 25, 
+        categoria: "Aves", 
+        tipo: "comida", 
+        imagem: '', 
+        descricao: "Ração balanceada, ideal para aves exóticas como a arara-azul e cacatua." 
+    },
+    { 
+        id: "59", 
+        titulo: "Verduras para Aves", 
+        preco: 10, 
+        categoria: "Aves", 
+        tipo: "comida", 
+        imagem: '', 
+        descricao: "Verduras frescas como couve e alface para aves herbívoras." 
+    },
+    { 
+        id: "60", 
+        titulo: "Nozes e Castanhas para Aves", 
+        preco: 15, 
+        categoria: "Aves", 
+        tipo: "comida", 
+        imagem: '', 
+        descricao: "Nozes e castanhas para aves, recomendadas para papagaios e araras." 
+    },
+
+    // Para peixes (como betta, neon, guppy)
+    { 
+        id: "61", 
+        titulo: "Ração para Peixes Tropicais", 
+        preco: 10, 
+        categoria: "Peixes", 
+        tipo: "comida", 
+        imagem: '', 
+        descricao: "Ração para peixes tropicais, ideal para betta, neon e guppy." 
+    },
+    { 
+        id: "62", 
+        titulo: "Alimento Vivo para Peixes Carnívoros", 
+        preco: 12, 
+        categoria: "Peixes", 
+        tipo: "comida", 
+        imagem: '', 
+        descricao: "Alimento vivo como larvas de mosquito, perfeito para peixes carnívoros como betta." 
+    },
+    { 
+        id: "63", 
+        titulo: "Comida Congelada para Peixes", 
+        preco: 15, 
+        categoria: "Peixes", 
+        tipo: "comida", 
+        imagem: '', 
+        descricao: "Comida congelada como camarões e artêmia, ideal para peixes carnívoros e onívoros." 
+    },
+
+    // Para aracnídeos (como aranha-caranguejeira, escorpião)
+    { 
+        id: "64", 
+        titulo: "Insetos para Aranhas e Escorpiões", 
+        preco: 8, 
+        categoria: "Aracnídeos", 
+        tipo: "comida", 
+        imagem: '', 
+        descricao: "Insetos vivos como grilos, tenébrio e outros, ideais para aracnídeos como tarântulas e escorpiões." 
+    },
+    { 
+        id: "65", 
+        titulo: "Vermes para Aranhas", 
+        preco: 5, 
+        categoria: "Aracnídeos", 
+        tipo: "comida", 
+        imagem: '', 
+        descricao: "Vermes e larvas, perfeitos para a alimentação de aranhas como a aranha-de-teia-de-ouro." 
+    },
+
+    // Para animais diversos
+    { 
+        id: "66", 
+        titulo: "Pó de Calcio para Animais", 
+        preco: 8, 
+        categoria: "Répteis", 
+        tipo: "comida", 
+        imagem: '', 
+        descricao: "Pó de cálcio essencial para a saúde óssea de répteis como serpentes e tartarugas." 
     }
 ];
