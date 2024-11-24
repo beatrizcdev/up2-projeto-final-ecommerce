@@ -35,7 +35,7 @@
     position: fixed;
     top: 0;
     right: 0;
-    background-color: #ffff;
+    background-color: var(--begePadrao);
     z-index: 10;
     border-radius: 10px;
     overflow-y: auto;
@@ -62,7 +62,7 @@
 
 .carrinho_excluirTudo{
     text-decoration: underline;
-    color: var(--brown-400);
+    color: var(--laranja);
     border: none;
 }
 
@@ -154,7 +154,11 @@
 }
 
 #carrinho_entrega p, #carrinho_subtotal p, #carrinho_total p{
-    color: var(--gray-900);
+    color:rgb(255, 140, 0);
+}
+
+#carrinho_entrega span, #carrinho_subtotal span, #carrinho_total span{
+    align-content: center;
 }
 
 #carrinho_total{
@@ -166,8 +170,8 @@
     width: 339px;
     height: 48px;
     font-size: 24px;
-    background-color: var(--brown-400);
-    color: var(--gray-100);
+    background-color: rgb(255, 140, 0);
+    color: white;
     border-radius: 5px;
     margin: 20px;
 }
