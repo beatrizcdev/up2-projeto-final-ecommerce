@@ -8,102 +8,104 @@
     <title>Animais</title>
 </head>
 <body>
-    <header>
-        <a href="./index.html"><img src="../imagens/mundo-exotico-logotipo.svg" alt="logo" class="logotipo" width="20px"></a>
+    <div class="animais-container">
+        <header>
+            <a href="../index.html"><img src="../imagens/mundo-exotico-logotipo.svg" alt="logo" class="logotipo" width="20px"></a>
 
-        <nav>
-            <ul>
-                <a href="./Paginas/animais.html"><li><i class="fas fa-paw"></i> Animais</li></a>
-                <a href="./Paginas/animais.html"><li><i class="fas fa-box"></i> Suprimentos</li></a>
-                <a href="./Paginas/suporte.html"><li><i class="fas fa-question-circle"></i> Suporte</li></a>
-            </ul>
-        </nav>
+            <nav>
+                <ul>
+                    <a href="../Paginas/animais.html"><li><i class="fas fa-paw"></i> Animais</li></a>
+                    <a href="./Paginas/animais.html"><li><i class="fas fa-box"></i> Suprimentos</li></a>
+                    <a href="./Paginas/suporte.html"><li><i class="fas fa-question-circle"></i> Suporte</li></a>
+                </ul>
+            </nav>
 
-        <div class="opcoes-extra">
-            <a href="./Paginas/perfil.html"><img src="../imagens/header-perfil.svg" alt="perfil" class="opcoes-extra"></a>
-            <button id="carrinho_open" style="background: none;"> 
-                <a href="javascript:void(0)" class="link__quantity">
-                    <img src="../imagens/header-carrinho.svg" class="opcoes-extra"></a>
-                </a>
+            <div class="opcoes-extra">
+                <a href="./Paginas/perfil.html"><img src="../imagens/header-perfil.svg" alt="perfil" class="opcoes-extra"></a>
+                <button id="carrinho_open" style="background: none;"> 
+                        <img src="../imagens/header-carrinho.svg" class="opcoes-extra">
+                    </a>
                 </button>
                 <div id="fade" class="hide"></div>
                 <div id="carrinho_modal" class="hide">
-                  <div class="carrinho_header">
-                    <h2 id="carrinho_title">Seu carrinho</h2>
-                    <img src="../imagens/X.svg" alt="" class="carrinho_out">
-                  </div>
-                  <div class="carrinho_container">
-                  <div class="carrinho_main">
-                    <p id="carrinho_quantidadeItens">0 ítens</p>
-                    <button style="background: none;" class="carrinho_excluirTudo">Excluir tudo</button>
-                  </div>
-                  <div class="carrinho_section">
-                    <div class="carrinho_section_parte1">
-                      <div class="carrinho_section_baseProduto">
-                        <img src="" alt="" id="carrinho_imagem_produto">
-                        <div class="carrinho_produtoDescricao">
-                          <p>Nome do produto</p>
-                          <div class="carrinho_tag">
-                            <span class="carrinho_produtoTagTexto">Animal</span>
-                          </div>
+                    <div class="carrinho_header">
+                        <h2 id="carrinho_title">Seu carrinho</h2>
+                        <img src="../imagens/X.svg" alt="" class="carrinho_out">
+                    </div>
+                    <div class="carrinho_container">
+                        <div class="carrinho_main">
+                            <p id="carrinho_quantidadeItens">0 ítens</p>
+                            <button style="background: none;" class="carrinho_excluirTudo">Excluir tudo</button>
                         </div>
-                      </div>
-                        <button type="button" class="carrinho_lixeira">
-                          <img src="../imagens/Trash.svg" alt="">
-                        </button>
+                        <div class="carrinho_section">
+                            <div class="carrinho_section_parte1">
+                                <div class="carrinho_section_baseProduto">
+                                    <img src="" alt="" id="carrinho_imagem_produto">
+                                    <div class="carrinho_produtoDescricao">
+                                        <p>Nome do produto</p>
+                                        <div class="carrinho_tag">
+                                            <span class="carrinho_produtoTagTexto">Animal</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="carrinho_lixeira">
+                                    <img src="../imagens/Trash.svg" alt="">
+                                </button>
+                            </div>
+                            <div class="carrinho_valorProduto">
+                                <h2 id="carrinho_preco_produto">R$ 0,00</h2>
+                                <div class="carrinho_seletorDeQuantidade">
+                                    <button class="btn-minus"><img src="../imagens/Minus.svg" alt=""></button>
+                                    <span id="carrinho_produto_quantidade">1</span>
+                                    <button class="btn-plus">
+                                        <img src="../imagens/Plus.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="carrinho_valorProduto">
-                      <h2 id="carrinho_preco_produto">R$ 0,00</h2>
-                      <div class="carrinho_seletorDeQuantidade">
-                        <button class="btn-minus"><img src="../imagens/Minus.svg" alt=""></button>
-                        <span id="carrinho_produto_quantidade">1</span>
-                        <button class="btn-plus">
-                        <img src="../imagens/Plus.svg" alt="">
-                        </button>
-                      </div>
+                    <div class="carrinho_footer">
+                        <div class="carrinho_tiposValores">
+                            <div id="carrinho_subtotal">
+                                <p>Subtotal</p>
+                                <span>R$ 0,00</span>
+                            </div>
+                            <div id="carrinho_entrega">
+                                <p>Entrega</p>
+                                <span>R$ 0,00</span>
+                            </div>
+                            <div id="carrinho_total">
+                                <p>Total</p>
+                                <span>R$ 0,00</span>
+                            </div>
+                        </div>
+                        <div id="carrinho_finalizarCompra">
+                            <button class="carrinho_finalizarCompra">Finalizar compra</button>
+                        </div>
                     </div>
-                  </div>
                 </div>
-                  <div class="carrinho_footer">
-                    <div class="carrinho_tiposValores">
-                      <div id="carrinho_subtotal">
-                        <p>Subtotal</p>
-                        <span>R$ 0,00</span>
-                      </div>
-                      <div id="carrinho_entrega">
-                        <p>Entrega</p>
-                        <span>R$ 0,00</span>
-                      </div>
-                      <div id="carrinho_total">
-                        <p>Total</p>
-                        <span>R$ 0,00</span>
-                      </div>
-                    </div>
-                    <div id="carrinho_finalizarCompra">
-                      <button class="carrinho_finalizarCompra">Finalizar compra</button>
-                    </div>
-                  </div>
-                </div>
-            
-        </div>
-    </header>
-    <main class="animais-main">
-        <!--injetar banner correspondente-->
-    </main>
+            </div>
+        </header>
 
-    <div class="animais-grid-container">
-        <div class = "animais-grid-item">
-        <a href="#" ><img src="../imagens/lagartoicon-animais.svg" alt="Animais"></a>
+        <main class="animais-main">
+            <!--injetar banner correspondente-->
+        </main>
+
+        <div class="animais-grid-container">
+            <div class="animais-grid-item">
+                <a href="#"><img src="../imagens/lagartoicon-animais.svg" alt="Animais"></a>
+            </div>
+            <div class="animais-grid-item">
+                <a href="#"><img src="../imagens/comidaicon-animais.svg" alt="Comidas"></a>
+            </div>
+            <div class="animais-grid-item">
+                <a href="#"><img src="../imagens/outrosicon-animais.svg" alt="Outros"></a>
+            </div>
         </div>
-        <div class = "animais-grid-item">
-        <a href="#"><img src="../imagens/comidaicon-animais.svg" alt="Comidas"></a>
+
+        <div class="animais-tipo">
+            <!--injetar html dos produtos aqui-->
         </div>
-        <div class = "animais-grid-item">
-        <a href="#"><img src="../imagens/outrosicon-animais.svg" alt="Outros"></a>
-        </div>
-    </div>
-    <div class = "animais-tipo">
-        <!--injetar html dos produtos aqui-->
     </div>
 
     <footer class="footer">
@@ -126,10 +128,9 @@
         <div class="footer-bottom">
             <p>&copy; 2024 Mundo Exótico. Todos os direitos reservados.</p>
         </div>
-        <script src="../script/carrinho.js"></script>
-        <script type="module" src="../script/animais.js"></script>
     </footer>
 
-        
+    <script src="../script/carrinho.js"></script>
+    <script type="module" src="../script/animais.js"></script>
 </body>
 </html>

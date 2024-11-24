@@ -6,8 +6,12 @@ const idCategoria = params.get('categoria');
 if(idCategoria){
     console.log('ID categoria: ', idCategoria);
 }else{
-    console.log('Não há id de produto na url')
-    window.location.href = '/';
+    console.log('Não há id de produto na url');
+    exibirPaginaAnimais();
+}
+
+function exibirPaginaAnimais(){
+    
 }
 
 function injetarBannerHtml(){
@@ -15,7 +19,10 @@ function injetarBannerHtml(){
 
     if(!container){
         console.error(`container com seletor "${container} não encontrado"`);
-        return;
+        bannerHtml = `
+        <img src="../imagens/animais-banner.svg" alt="banner animaispage " id="banner-animais">
+    `;
+    container.innerHTML += bannerHtml;
     }
 
     const bannerHtml = `
