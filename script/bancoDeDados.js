@@ -282,25 +282,17 @@ const produtos = [
         id: "38", 
         titulo: "Axolotl", 
         preco: 350, 
-        categoria: "Anfíbios", 
+        categoria: "Répteis", 
         tipo: "animal", 
         imagem: '', 
         descricao: "O axolotl é uma espécie de salamandra aquática que mantém suas características larvais durante a fase adulta. Sua dieta inclui vermes, pequenos peixes e outros invertebrados." 
     },
-    { 
-        id: "39", 
-        titulo: "Rã-touro", 
-        preco: 50, 
-        categoria: "Anfíbios", 
-        tipo: "animal", 
-        imagem: '', 
-        descricao: "A rã-touro é uma espécie de anfíbio conhecida por seu tamanho impressionante e sua capacidade de adaptação a diferentes ambientes. Alimenta-se de insetos, pequenos vertebrados e até mesmo outros anfíbios." 
-    },
+   
     { 
         id: "40", 
         titulo: "Salamandra", 
         preco: 120, 
-        categoria: "Anfíbios", 
+        categoria: "Répteis", 
         tipo: "animal", 
         imagem: '', 
         descricao: "As salamandras são anfíbios caracterizados por sua pele lisa e úmida. Sua alimentação inclui insetos e pequenos invertebrados, e elas vivem em ambientes aquáticos ou úmidos." 
@@ -845,3 +837,5 @@ const produtos = [
         descricao: "Filtro eficiente para manter o ambiente aquático de cágados limpo e livre de resíduos."
     }
 ];
+
+export {produtos};
