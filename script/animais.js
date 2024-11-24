@@ -10,6 +10,20 @@ if(idCategoria){
     window.location.href = '/';
 }
 
+function injetarBannerHtml(){
+    const container = document.querySelector(".animais-main");
+
+    if(!container){
+        console.error(`container com seletor "${container} não encontrado"`);
+        return;
+    }
+
+    const bannerHtml = `
+    <img src="../imagens/animais-${idCategoria}-banner.svg" alt="banner animaispage " id="banner-animais">
+    `;
+    container.innerHTML += bannerHtml;
+}
+
 function injetandoProdutosNoHtml(produtos, categoria, containerSeletor){
 
     //selecionando o container
@@ -52,4 +66,5 @@ function injetandoProdutosNoHtml(produtos, categoria, containerSeletor){
     });
 }
 
+injetarBannerHtml();
 injetandoProdutosNoHtml(produtos, idCategoria, '.animais-tipo');
