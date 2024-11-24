@@ -1,12 +1,3 @@
-
-body{font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f4f4f4;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-}
 #banner-animais {
     display: flex;
     box-sizing: border-box;
@@ -16,19 +7,14 @@ body{font-family: Arial, sans-serif;
     padding-top: 50px;
 }
 
-main{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.animais-main{
     width: 100%;
     padding-top: 50px;
     margin: 0;
     padding: 0;
 }
-h1{
-   background-color: white; 
-   border: 0px;
-}
 
-.grid-container {
+.animais-grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -37,7 +23,7 @@ h1{
     margin-left: 20%;
 }
 
-.grid-item{
+.animais-grid-item{
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -50,22 +36,19 @@ h1{
 
 }
 
-.grid-item:hover {
+.animais-grid-item:hover {
     background-color: green; 
     transform: scale(1.05); 
 }
 
-.grid-item img {
+.animais-grid-item img {
     width: 80px;
     height: 80px; 
     object-fit: contain; 
     pointer-events: none;
 }
 
-
-
-
-.aves{
+.animais-tipo{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 80px;
@@ -76,7 +59,7 @@ h1{
     margin-bottom: 10%;
 }
 
-.aves-item {
+.animais-tipo-item {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -85,12 +68,12 @@ h1{
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.aves-item:hover{
+.animais-tipo-item:hover{
     transform: scale(1.05); 
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.aves-item img{
+.animais-tipo-item img{
     width: 120px;
     height:  120px;
     border-radius: 50%;
@@ -98,20 +81,20 @@ h1{
     margin-bottom: 10px;
 }
 
-.aves-item p {
+.animais-tipo-item p {
     font-size: 14px;
     color: grey;
     margin: 5px 0;
 }
 
-.aves-item h3 {
+.animais-tipo-item h3 {
     font-size: 16px;
     color: #000;
     font-weight: bold;
     margin: 10px 0;
 }
 
-.aves-item button{
+.animais-tipo-item button{
     display: inline-block;
     padding: 10px 20px;
     background-color: orange;
@@ -125,7 +108,7 @@ h1{
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.aves-item .button:hover {
+.animais-tipo-item .button:hover {
     background-color: #ea620e; 
     transform: scale(1.05); 
 }

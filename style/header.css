@@ -35,7 +35,7 @@ nav ul{
 
 .logotipo{
     width: 60px;
-
+    cursor: pointer;
 }
 
 .opcoes-extra{
