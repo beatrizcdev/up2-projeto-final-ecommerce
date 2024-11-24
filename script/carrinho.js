@@ -75,3 +75,9 @@ function atualizarQuantidadeItensCarrinho() {
         quantidadeItensElemento.textContent = `${quantidadeTotal} ítens`; 
     }
 }
+
+function injetarHtmldoCarrinho(){
+
+};
+
+export {injetarHtmldoCarrinho};

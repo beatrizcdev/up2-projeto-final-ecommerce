@@ -33,15 +33,18 @@ function exibirPaginaPorTipo(produtos, tipo, containerSeletor){
     }
 
     //filtrar categoria
-    let produtosFiltrados = produtos.filter(produto => {
-        return produto.tipo === tipo;
-    });
-
-    if(produtosFiltrados.lenght !== 0){
+    let produtosFiltrados;
+    
+    if(tipo !== 'animal'){
         produtosFiltrados = produtos.filter(produto =>{
             return produto.tipo !== 'animal';
         });
     }
+    else{
+        produtosFiltrados = produtos.filter(produto => {
+        return produto.tipo === tipo;
+    });
+}
 
     //gerando e injetando no html
     produtosFiltrados.forEach(produto => {
@@ -66,16 +69,25 @@ function injetarBannerHtml(){
 
     if(!container){
         console.error(`container com seletor "${container} não encontrado"`);
-        bannerHtml = `
-        <img src="../imagens/animais-banner.svg" alt="banner animaispage " id="banner-animais">
-    `;
-    container.innerHTML += bannerHtml;
+        
     }
+
+    if(idCategoria !== 'Suprimentos' && idCategoria !== null){
 
     const bannerHtml = `
     <img src="../imagens/animais-${idCategoria}-banner.svg" alt="banner animaispage " id="banner-animais">
     `;
     container.innerHTML += bannerHtml;
+
+    }else{
+
+    container.innerHTML = '';
+        const bannerHtml = `
+        <img src="../imagens/animais-banner.svg" alt="banner animaispage " id="banner-animais">
+    `;
+    container.innerHTML += bannerHtml;
+    }
+    
 }
 
 
@@ -104,7 +116,7 @@ function injetandoProdutosNoHtml(produtos, categoria, containerSeletor){
             <p>${produto.titulo}</p>
             <h3>${formatarPreco(produto.preco)}</h3>
             <p>Em até 5x no cartão.</p>
-            class="button">Adicionar ao carrinho</a>
+            <button class="button">Adicionar ao carrinho</button>
         </div>
         `;
         container.innerHTML +=produtoHTML;
@@ -113,3 +125,7 @@ function injetandoProdutosNoHtml(produtos, categoria, containerSeletor){
 
 injetarBannerHtml();
 injetandoProdutosNoHtml(produtos, idCategoria, '.animais-tipo');
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.add('loaded');
+});
