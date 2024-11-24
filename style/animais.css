@@ -1,15 +1,15 @@
-.container {
+.animais-container {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
+.animais-main{
+    padding-top: 60px;
+}
 
-.animais-main {
-    flex-grow: 1;
-    padding: 20px;
-    background-color: #f9f9f9;
-    text-align: center;
+.animais-main img{
+    width: 100%;
 }
 
 .animais-grid-container {

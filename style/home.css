@@ -18,8 +18,7 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     margin-left: 5%;
     justify-items: center;
-    padding: 10px 50px;
-
+    padding: 0px 50px;
 }
 
 .home-container-propaganda{
@@ -30,9 +29,11 @@
     padding: 10px;
     justify-items: center;
     text-align: center;
+    margin-bottom: 10px;
 }
 .propaganda-container{
     max-width: 250px;
+    min-width: 215px;
 }
 
 .propaganda-container :hover{

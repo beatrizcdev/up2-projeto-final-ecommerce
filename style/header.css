@@ -11,7 +11,7 @@ header{
     background-color: white;
     border-radius: 0 0 15px 15px;
     box-sizing: border-box;
-
+    box-shadow: 0 1px 10px rgba(55, 55, 55, 0.355);;
 }
 
 nav{
@@ -21,7 +21,7 @@ nav{
     max-width: 600px;
     flex-grow: 1;
     flex-basis: 0;
-        
+    cursor: pointer; 
 }
 
 nav ul{
@@ -43,6 +43,7 @@ nav ul{
     gap: 10px;
     align-items: center;
     flex-shrink: 0;
+    cursor: pointer;
 }
 
 
