@@ -28,18 +28,18 @@ function exibirPaginaPorTipo(produtos, tipo, containerSeletor){
     const container = document.querySelector(containerSeletor);
 
     if(!container){
-        console.error(`container com seletor "${container} não encontrado"`);
+        console.error(`container com seletor "${containerSeletor} não encontrado"`);
         return;
     }
 
     //filtrar categoria
-    const produtosFiltrados = produtos.filter(produto => {
+    let produtosFiltrados = produtos.filter(produto => {
         return produto.tipo === tipo;
     });
 
-    if(!produtosFiltrados){
-        produtosFiltrados == produtos.filter(produto =>{
-            return produto.tipo !== 'animais';
+    if(produtosFiltrados.lenght !== 0){
+        produtosFiltrados = produtos.filter(produto =>{
+            return produto.tipo !== 'animal';
         });
     }
 
@@ -53,7 +53,7 @@ function exibirPaginaPorTipo(produtos, tipo, containerSeletor){
             <p>${produto.titulo}</p>
             <h3>${formatarPreco(produto.preco)}</h3>
             <p>Em até 5x no cartão.</p>
-            class="button">Adicionar ao carrinho</a>
+            <button class="button">Adicionar ao carrinho</button>
         </div>
         `;
         container.innerHTML +=produtoHTML;

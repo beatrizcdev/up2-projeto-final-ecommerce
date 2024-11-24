@@ -14,7 +14,7 @@ const produtos = [
         preco: 100, 
         categoria: "Cágados", 
         tipo: "animal", 
-        imagem: '', 
+        imagem: '../imagens/bancoDeDados-id-2.svg', 
         descricao: "O Cágado-de-barbicha é um réptil aquático de água doce, conhecido por sua habilidade de se camuflar entre a vegetação. Alimenta-se principalmente de plantas aquáticas e pequenos invertebrados. Habita lagos e rios com águas calmas, preferindo ambientes com vegetação abundante. O clima ideal para esse cágado é o tropical, com alta umidade e temperaturas elevadas durante o ano todo." 
     },
     { 
@@ -23,7 +23,7 @@ const produtos = [
         preco: 90, 
         categoria: "Cágados", 
         tipo: "animal", 
-        imagem: '', 
+        imagem: '../imagens/bancoDeDados-id-3.svg', 
         descricao: "O Cágado-pintado é um pequeno réptil que habita rios e lagos da América do Norte. Sua característica marcante são as cores vibrantes e as manchas coloridas em seu casco. Ele é onívoro, alimentando-se de plantas aquáticas, insetos e pequenos peixes. O habitat desse cágado são áreas de água doce com vegetação aquática, e ele é adaptado a climas temperados e subtropicais." 
     },
     { 
@@ -32,7 +32,7 @@ const produtos = [
         preco: 150, 
         categoria: "Cágados", 
         tipo: "animal", 
-        imagem: '', 
+        imagem: '../imagens/bancoDeDados-id-4.svg', 
         descricao: "O Cágado-da-caatinga é um réptil adaptado a ambientes semiáridos. Ele se alimenta principalmente de plantas de caatinga, frutos e raízes. Esse cágado habita áreas de vegetação esparsa e de clima seco, preferindo áreas com poucas chuvas e temperaturas elevadas durante a maior parte do ano. A Caatinga, seu habitat, é caracterizada por um clima quente e seco, com vegetação adaptada à escassez de água." 
     },
     { 
@@ -41,7 +41,7 @@ const produtos = [
         preco: 110, 
         categoria: "Cágados", 
         tipo: "animal", 
-        imagem: '', 
+        imagem: '../imagens/bancoDeDados-id-5.svg', 
         descricao: "Este cágado é caracterizado por seu pescoço mais longo, o que facilita sua alimentação de plantas aquáticas mais profundas. Ele habita rios e lagos da América do Sul, em ambientes com vegetação aquática. Alimenta-se principalmente de plantas, insetos e pequenos peixes. O clima quente e úmido da região amazônica e das áreas tropicais do continente são ideais para essa espécie." 
     },
     { 
