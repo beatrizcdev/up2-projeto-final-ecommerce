@@ -35,7 +35,7 @@
     position: fixed;
     top: 0;
     right: 0;
-    background-color: var(--begePadrao);
+    background-color: whitesmoke;
     z-index: 10;
     border-radius: 10px;
     overflow-y: auto;
@@ -117,7 +117,7 @@
     display: flex;
     justify-content: space-between;
     padding-top: 16px;
-    box-shadow: 0px 1px var(--gray-600);
+    box-shadow: 0px 1px black;
     padding-bottom: 8px;
 }
 
@@ -170,7 +170,7 @@
     width: 339px;
     height: 48px;
     font-size: 24px;
-    background-color: rgb(255, 140, 0);
+    background-color: var(--laranja);
     color: white;
     border-radius: 5px;
     margin: 20px;

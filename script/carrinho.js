@@ -38,8 +38,7 @@ function atualizarCarrinho(){
               <div class="carrinho_produtoDescricao">
                 <p>${produto.nome}</p>
                 <div class="carrinho_tag">
-                  <img src="${produto.vegano ? './image/plant_carrinho.svg' : './image/Cow.png'}" alt="tag produto" id="carrinho_produtoTagImg">
-                  <span class="carrinho_produtoTagTexto">${produto.vegano ? 'Vegano' : 'Contém leite'}</span>
+                  <span class="carrinho_produtoTagTexto">${produto.tipo}</span>
                 </div>
               </div>
             </div>
@@ -80,4 +79,4 @@ function injetarHtmldoCarrinho(){
 
 };
 
-export {injetarHtmldoCarrinho};
+export{injetarHtmldoCarrinho};
