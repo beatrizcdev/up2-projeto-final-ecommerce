@@ -1,0 +1,107 @@
+.animais-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.animais-main{
+    padding-top: 40px;
+}
+
+.animais-main img{
+    width: 100%;
+}
+
+.animais-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    padding: 20px;
+    margin: 0 20%;
+}
+
+.animais-grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f4f4f4;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.animais-grid-item:hover {
+    background-color: green; 
+    transform: scale(1.05); 
+}
+
+.animais-grid-item img {
+    width: 80px;
+    height: 80px; 
+    object-fit: contain; 
+    pointer-events: none;
+}
+
+.animais-tipo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    align-items: center;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.animais-tipo-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.animais-tipo-item:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.animais-tipo-item img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.animais-tipo-item h3 {
+    font-size: 16px;
+    color: #000;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.animais-tipo-item p {
+    font-size: 14px;
+    color: grey;
+    margin: 5px 0;
+}
+
+.animais-tipo-item button {
+    padding: 10px 20px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.animais-tipo-item button:hover {
+    background-color: #ea620e; 
+    transform: scale(1.05); 
+}

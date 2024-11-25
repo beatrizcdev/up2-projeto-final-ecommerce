@@ -1,0 +1,2 @@
+import {produtos} from './bancoDeDados';
+

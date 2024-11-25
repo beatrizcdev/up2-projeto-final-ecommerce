@@ -10,19 +10,82 @@
 <body>
 
     <header>
-        <img src="./imagens/mundo-exotico-logotipo.svg" alt="logo" class="logotipo" width="20px">
+        <a href="./index.html"><img src="./imagens/mundo-exotico-logotipo.svg" alt="logo" class="logotipo" width="20px"></a>
 
         <nav>
             <ul>
                 <a href="./Paginas/animais.html"><li><i class="fas fa-paw"></i> Animais</li></a>
-                <a href="./Paginas/suprimentos.html"><li><i class="fas fa-box"></i> Suprimentos</li></a>
+                <a href="./Paginas/animais.html?categoria=Suprimentos"><li><i class="fas fa-box"></i> Suprimentos</li></a>
                 <a href="./Paginas/suporte.html"><li><i class="fas fa-question-circle"></i> Suporte</li></a>
             </ul>
         </nav>
 
         <div class="opcoes-extra">
-            <a href="./Paginas/perfil.html"><img src="./imagens/header-perfl.svg" alt="perfil" class="opcoes-extra"></a>
-            <a href="./Paginas/carrinho.html"><img src="./imagens/header-carrinho.svg" class="opcoes-extra"></a>
+            <a href="./Paginas/perfil.html"><img src="./imagens/header-perfil.svg" alt="perfil" class="opcoes-extra"></a>
+            <button id="carrinho_open" style="background: none;"> 
+                <a href="javascript:void(0)" class="link__quantity">
+                    <img src="./imagens/header-carrinho.svg" class="opcoes-extra"></a>
+                </a>
+                </button>
+                <div id="fade" class="hide"></div>
+                <div id="carrinho_modal" class="hide">
+                  <div class="carrinho_header">
+                    <h2 id="carrinho_title">Seu carrinho</h2>
+                    <img src="./imagens/X.svg" alt="" class="carrinho_out">
+                  </div>
+                  <div class="carrinho_container">
+                  <div class="carrinho_main">
+                    <p id="carrinho_quantidadeItens">0 ítens</p>
+                    <button style="background: none;" class="carrinho_excluirTudo">Excluir tudo</button>
+                  </div>
+                  <div class="carrinho_section">
+                    <div class="carrinho_section_parte1">
+                      <div class="carrinho_section_baseProduto">
+                        <img src="#" alt="" id="carrinho_imagem_produto">
+                        <div class="carrinho_produtoDescricao">
+                          <p>Nome do produto</p>
+                          <div class="carrinho_tag">
+                            <span class="carrinho_produtoTagTexto">Vegano</span>
+                          </div>
+                        </div>
+                      </div>
+                        <button type="button" class="carrinho_lixeira">
+                          <img src="./imagens/Trash.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="carrinho_valorProduto">
+                      <h2 id="carrinho_preco_produto">R$ 0,00</h2>
+                      <div class="carrinho_seletorDeQuantidade">
+                        <button class="btn-minus"><img src="./imagens/Minus.svg" alt=""></button>
+                        <span id="carrinho_produto_quantidade">1</span>
+                        <button class="btn-plus">
+                        <img src="./imagens/Plus.svg" alt="">
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                  <div class="carrinho_footer">
+                    <div class="carrinho_tiposValores">
+                      <div id="carrinho_subtotal">
+                        <p>Subtotal</p>
+                        <span>R$ 0,00</span>
+                      </div>
+                      <div id="carrinho_entrega">
+                        <p>Entrega</p>
+                        <span>R$ 0,00</span>
+                      </div>
+                      <div id="carrinho_total">
+                        <p>Total</p>
+                        <span>R$ 0,00</span>
+                      </div>
+                    </div>
+                    <div id="carrinho_finalizarCompra">
+                      <button class="carrinho_finalizarCompra">Finalizar compra</button>
+                    </div>
+                  </div>
+                </div>
+            
         </div>
     </header>
     <main class="main-home">
@@ -37,26 +100,43 @@
             <input type="radio" name="radio" id="radio3">
 
             <div class="carrossel-box primeiro">
-
-                <img src="./imagens/home-tartaruga.svg" alt="tartaruga" class="img-carrossel">
-                <img src="./imagens/home-lagarto.svg" alt="lagarto" class="img-carrossel">
-                <img id="home-papagaio" src="./imagens/home-papagaio.svg" alt="papagaio" class="img-carrossel">
+                <a href="./Paginas/animais.html?categoria=Cágados">
+                  <img src="./imagens/home-tartaruga.svg" alt="tartaruga" class="img-carrossel">
+                </a>
+                <a href="./Paginas/animais.html?categoria=Répteis">
+                  <img src="./imagens/home-lagarto.svg" alt="lagarto" class="img-carrossel">
+                </a>
+                <a href="./Paginas/animais.html?categoria=Aves">
+                  <img id="home-papagaio" src="./imagens/home-papagaio.svg" alt="papagaio" class="img-carrossel">
+                </a>
 
             </div>
 
             <div class="carrossel-box">
 
+              <a href="./Paginas/animais.html?categoria=Répteis">
                 <img src="./imagens/home-lagarto.svg" alt="lagarto" class="img-carrossel">
+              </a>
+              <a href="./Paginas/animais.html?categoria=Aves">
                 <img id="home-papagaio" src="./imagens/home-papagaio.svg" alt="papagaio" class="img-carrossel">
+              </a>
+              <a href="./Paginas/animais.html?categoria=Peixes">
                 <img src="./imagens/home-peixe.svg" alt="peixe" class="img-carrossel">
+              </a>
                 
             </div>
 
             <div class="carrossel-box">
 
+              <a href="./Paginas/animais.html?categoria=Aves">
                 <img id="home-papagaio" src="./imagens/home-papagaio.svg" alt="papagaio" class="img-carrossel">
+              </a>
+              <a href="./Paginas/animais.html?categoria=Peixes">
                 <img src="./imagens/home-peixe.svg" alt="peixe" class="img-carrossel">
+              </a>
+              <a href="./Paginas/animais.html?categoria=Aracnídeos">
                 <img src="./imagens/home-aranha.svg" alt="aranha" class="img-carrossel">
+              </a>
                 
             </div>
 
@@ -77,29 +157,64 @@
 
     <section class="propagandas">
 
-        <a href="">
-            <div class="container">
-                <img src="#" alt="Ração de peixe">
-                <h3>Ração de Peixe com até 50% de desconto.</h3>
+      <div class="propaganda-container">
+        <a href="./Paginas/animais.html?tipo=comida">
+            <div class="home-container-propaganda">
+                <img src="./imagens/home-propaganda1.svg" alt="comidas">
+                <h3>Comida de animais com até 25% de desconto!!</h3>
             </div>
         </a>
-
-        <a href="">
-            <div class="container">
-                <img src="#" alt="Ração de peixe">
-                <h3>Ração de Peixe com até 50% de desconto.</h3>
+      </div>
+      <div class="propaganda-container">
+        <a href="./Paginas/produto.html?id=89">
+            <div class="home-container-propaganda">
+                <img src="./imagens/home-propaganda2.svg" alt="comidas">
+                <h3>Seu filtro de aquaterário novo na promo especial!!</h3>
             </div>
         </a>
-
-        <a href="">
-            <div class="container">
-                <img src="#" alt="Ração de peixe">
-                <h3>Ração de Peixe com até 50% de desconto.</h3>
+      </div>
+      <div class="propaganda-container">
+        <a href="./Paginas/animais.html?categoria=Répteis">
+            <div class="home-container-propaganda">
+                <img src="./imagens/home-propaganda-3.svg" alt="comidas">
+                <h3>O que você precisa pra ter o seu réptil agora!!</h3>
             </div>
         </a>
+      </div>
+      <div class="propaganda-container">
+        <a href="./Paginas/produto.html?id=56">
+            <div class="home-container-propaganda">
+                <img src="./imagens/home-propaganda4.svg" alt="comidas">
+                <h3>O gerente enlouqueceu!! tem promo de sementes</h3>
+            </div>
+        </a>
+      </div>        
     </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+          <div class="footer-section">
+              <h4>Sobre Nós</h4>
+              <p>Somos apaixonados por animais exóticos e oferecemos os melhores serviços e produtos para o cuidado dos seus pets únicos!</p>
+          </div>
+          <div class="footer-section">
+              <h4>Contato</h4>
+              <p>Email: suporte@mundoexotico.com</p>
+              <p>Telefone: (xx) 9999-2222</p>
+              <div class="social-icons">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+              </div>
+          </div>
+      </div>
+      <div class="footer-bottom">
+          <p>&copy; 2024 Mundo Exótico. Todos os direitos reservados.</p>
+      </div>
+  </footer>
     
-    
-    <script src="./script.js"></script>
+    <script type="module" src="./script/carrinho.js"></script>
+    <script type="module" src="./script/carrossel.js"></script>
+    <script type="module" src="./script/home.js"></script>
 </body>
 </html>

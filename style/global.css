@@ -1,8 +1,15 @@
+:root{
+    --laranja: rgb(255, 140, 0);
+    --verdeFundo: #218d09;
+    --begePadrao: #f8dec9;
+}
+
 body{
     padding: 0;
     margin: 0;
+    background: linear-gradient(to top, var(--begePadrao), var(--verdeFundo));
+    max-height: fit-content;    
 }
-
 
 ul{
     list-style: none;
@@ -17,4 +24,6 @@ a{
 p{
     color: black;
 }
+
+
 
