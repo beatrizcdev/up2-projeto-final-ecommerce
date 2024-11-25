@@ -82,15 +82,15 @@ function atualizarCarrinho(produtosCarregados){
               </div>
             </div>
                 <button type="button" class="carrinho_lixeira${produto.idProduto}" onclick="removerDoCarrinho('${produto.idProduto}')">
-                    <img src="../imagens/Trash.svg" alt="">
+                    <img src="./imagens/Trash.svg" alt="">
                 </button>
           </div>
           <div class="carrinho_valorProduto">
             <h2 id="carrinho_preco_produto">${formatarPreco(produto.preco)}</h2>
             <div class="carrinho_seletorDeQuantidade">
-              <button class="btn-minus" data-id="${produto.idProduto}"><img src="../imagens/Minus.svg" alt="diminuir"></button>
+              <button class="btn-minus" data-id="${produto.idProduto}"><img src="./imagens/Minus.svg" alt="diminuir"></button>
               <span id="carrinho_produto_quantidade">${produto.quantidade}</span>
-              <button class="btn-plus" data-id="${produto.idProduto}"><img src="../imagens/Plus.svg" alt="aumentar"></button>
+              <button class="btn-plus" data-id="${produto.idProduto}"><img src="./imagens/Plus.svg" alt="aumentar"></button>
             </div>
         `;
         carrinhoContainer.appendChild(carrinhoItem);
@@ -203,5 +203,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 carregarCarrinho();
 
-export{carregarCarrinho};
+export{carregarCarrinho, atualizarCarrinho, formatarPreco};
 

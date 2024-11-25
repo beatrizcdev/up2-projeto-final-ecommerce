@@ -1,2 +1,2 @@
-import {produtos} from './bancoDeDados';
+//import {produtos} from './bancoDeDados';
 

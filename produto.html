@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body id="produto_body">
+    <header>
+        <a href="./index.html"><img src="./imagens/mundo-exotico-logotipo.svg" alt="logo" class="logotipo" width="20px"></a>
+
+        <nav>
+            <ul>
+                <a href="./animais.html"><li><i class="fas fa-paw"></i> Animais</li></a>
+                <a href="./animais.html?categoria=Suprimentos"><li><i class="fas fa-box"></i> Suprimentos</li></a>
+                <a href="./suporte.html"><li><i class="fas fa-question-circle"></i> Suporte</li></a>
+            </ul>
+        </nav>
+
+        <div class="opcoes-extra">
+            <a href="./perfil.html"><img src="./imagens/header-perfil.svg" alt="perfil" class="opcoes-extra"></a>
+            <button id="carrinho_open" style="background: none;"> 
+                <a href="javascript:void(0)" class="link__quantity">
+                    <img src="./imagens/header-carrinho.svg" class="opcoes-extra"></a>
+                </a>
+                </button>
+                <div id="fade" class="hide"></div>
+                <div id="carrinho_modal" class="hide">
+                  <div class="carrinho_header">
+                    <h2 id="carrinho_title">Seu carrinho</h2>
+                    <img src="./imagens/X.svg" alt="" class="carrinho_out">
+                  </div>
+                  <div class="carrinho_container">
+                  <div class="carrinho_main">
+                    <p id="carrinho_quantidadeItens">0 ítens</p>
+                    <button style="background: none;" class="carrinho_excluirTudo">Excluir tudo</button>
+                  </div>
+                  <div class="carrinho_section">
+                    <div class="carrinho_section_parte1">
+                      <div class="carrinho_section_baseProduto">
+                        <img src="#" alt="" id="carrinho_imagem_produto">
+                        <div class="carrinho_produtoDescricao">
+                          <p>Nome do produto</p>
+                          <div class="carrinho_tag">
+                            <span class="carrinho_produtoTagTexto">Vegano</span>
+                          </div>
+                        </div>
+                      </div>
+                        <button type="button" class="carrinho_lixeira">
+                          <img src="./imagens/Trash.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="carrinho_valorProduto">
+                      <h2 id="carrinho_preco_produto">R$ 0,00</h2>
+                      <div class="carrinho_seletorDeQuantidade">
+                        <button class="btn-minus"><img src="./imagens/Minus.svg" alt=""></button>
+                        <span id="carrinho_produto_quantidade">1</span>
+                        <button class="btn-plus">
+                        <img src="./imagens/Plus.svg" alt="">
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                  <div class="carrinho_footer">
+                    <div class="carrinho_tiposValores">
+                      <div id="carrinho_subtotal">
+                        <p>Subtotal</p>
+                        <span>R$ 0,00</span>
+                      </div>
+                      <div id="carrinho_entrega">
+                        <p>Entrega</p>
+                        <span>R$ 0,00</span>
+                      </div>
+                      <div id="carrinho_total">
+                        <p>Total</p>
+                        <span>R$ 0,00</span>
+                      </div>
+                    </div>
+                    <div id="carrinho_finalizarCompra">
+                      <button class="carrinho_finalizarCompra">Finalizar compra</button>
+                    </div>
+                  </div>
+                </div>
+        </div>
+    </header>
+  <main class="produto_main">
+    <img id="produto_imagem" src="" alt="">
+    <div class="produto_info">
+        <h1 id="produto_titulo"></h1>
+        <h1 id="produto_preco"></h1>
+        <div class="produto_tag">
+            <img id="produto_tag-imagem" src="" alt="">
+            <p id="produto_tag-texto"></p>
+        </div>
+        <p id="produto_descricao"></p>
+        <form id="product__form">
+            <section class="product__observation">
+              <label for="observation">Observações sobre o pedido</label>
+              <textarea rows="3" name="observation" id="observation" placeholder="Digite suas observações."></textarea>
+            </section>
+            <div class="product__buy">
+              <section class="product__quantity">
+                <button type="button" class="product__quantity--minus" >
+                  <img src="./imagens/Minus.svg" alt="menos um">
+                </button>
+                <input type="text" id="product__quantity_number" class="product__quantity--input" value="1">
+                <button type="button" class="product__quantity--plus">
+                  <img src="./imagens/Plus.svg" alt="mais um">
+                </button>
+              </section>
+              <button type="button" class="product__button">
+                Comprar
+              </button>
+            </div>
+          </form>
+    </div>
+  </main>
+  <footer class="footer">
+    <!--inserir o footer aqui-->
+  </footer>
+  <script type="module" src="./script/carrinho.js"></script>
+  <script type="module" src="./script/produto.js"></script>
+</body>
+</html>

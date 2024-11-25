@@ -50,7 +50,7 @@ function exibirPaginaPorTipo(produtos, tipo, containerSeletor) {
     produtosFiltrados.forEach(produto => {
         const produtoHTML = `
         <div class="animais-tipo-item">
-            <a href="./pagina.html?p=${produto.id}">
+            <a href="./produto.html?p=${produto.id}">
                 <img src="${produto.imagem}" alt="${produto.titulo}">
             <p>${produto.titulo}</p>
             <h3>${formatarPreco(produto.preco)}</h3>
@@ -80,13 +80,13 @@ function injetarBannerHtml() {
 
     if (idCategoria !== 'Suprimentos' && idCategoria !== null) {
         const bannerHtml = `
-        <img src="../imagens/animais-${idCategoria}-banner.svg" alt="banner animaispage " id="banner-animais">
+        <img src="./imagens/animais-${idCategoria}-banner.svg" alt="banner animaispage " id="banner-animais">
         `;
         container.innerHTML += bannerHtml;
     } else {
         container.innerHTML = '';
         const bannerHtml = `
-        <img src="../imagens/home-banner-main.svg" alt="banner animaispage " id="banner-animais">
+        <img src="./imagens/home-banner-main.svg" alt="banner animaispage " id="banner-animais">
         `;
         container.innerHTML += bannerHtml;
     }
@@ -125,3 +125,5 @@ function injetandoProdutosNoHtml(produtos, categoria, containerSeletor) {
 
 injetarBannerHtml();
 injetandoProdutosNoHtml(produtos, idCategoria, '.animais-tipo');
+
+export{formatarPreco};
