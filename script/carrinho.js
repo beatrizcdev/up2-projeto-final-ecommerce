@@ -257,6 +257,40 @@ function finalizarCompra(event) {
   atualizarQuantidadeItensCarrinho();
 }
 
+function alterarQuantidadeProduto(idProduto, valor) {
+  try {
+      const produtosNoCarrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+      console.log("Carrinho atual:", produtosNoCarrinho);
+
+      const produto = produtosNoCarrinho.find(p => p.idProduto === idProduto);
+
+      if (!produto) {
+          console.error("Produto não encontrado no carrinho:", idProduto);
+          return;
+      }
+
+      const novaQuantidade = produto.quantidade + valor;
+
+      if (novaQuantidade < 1) {
+          console.warn("A quantidade mínima é 1. Ajustando...");
+          return;
+      }
+
+      produto.quantidade = novaQuantidade;
+      console.log(`Produto ${idProduto} atualizado para nova quantidade:`, novaQuantidade);
+
+      localStorage.setItem('carrinho', JSON.stringify(produtosNoCarrinho));
+
+      // Atualizar o frontend
+      atualizarCarrinho(produtosNoCarrinho);
+      somarConta();
+      atualizarQuantidadeItensCarrinho();
+  } catch (error) {
+      console.error("Erro ao atualizar a quantidade do produto:", error);
+  }
+}
+
+
 document.addEventListener("click", (event) => {
   if (event.target.closest(".carrinho_finalizarCompra")) {
       finalizarCompra(event);
@@ -268,6 +302,21 @@ document.addEventListener('DOMContentLoaded', (event) =>{
   if (botaoExcluirTudo) {
       botaoExcluirTudo.addEventListener("click", excluirTudo);
       
+  }
+});
+
+document.addEventListener("click", function(event) {
+
+  // Botão Menos 
+  if (event.target.closest(".btn-minus")) {
+      const idProduto = event.target.closest(".btn-minus").dataset.id;
+      alterarQuantidadeProduto(idProduto, -1, event);
+  }
+
+  // Botão mais
+  if (event.target.closest(".btn-plus")) {
+      const idProduto = event.target.closest(".btn-plus").dataset.id;
+      alterarQuantidadeProduto(idProduto, 1, event);
   }
 });
 
