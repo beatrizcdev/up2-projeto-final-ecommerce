@@ -56,12 +56,11 @@ function exibirPaginaPorTipo(produtos, tipo, containerSeletor){
             <p>${produto.titulo}</p>
             <h3>${formatarPreco(produto.preco)}</h3>
             <p>Em até 5x no cartão.</p>
-            <button class="button">Adicionar ao carrinho</button>
+            <button data-id="${produto.id}" class="product__button">Adicionar ao carrinho</button>
         </div>
         `;
         container.innerHTML +=produtoHTML;
-    });
-    
+    });   
 }
 
 function injetarBannerHtml(){
@@ -71,7 +70,6 @@ function injetarBannerHtml(){
         console.error(`container com seletor "${container} não encontrado"`);
         
     }
-
     if(idCategoria !== 'Suprimentos' && idCategoria !== null){
 
     const bannerHtml = `
@@ -83,13 +81,11 @@ function injetarBannerHtml(){
 
     container.innerHTML = '';
         const bannerHtml = `
-        <img src="../imagens/animais-banner.svg" alt="banner animaispage " id="banner-animais">
+        <img src="../imagens/home-banner-main.svg" alt="banner animaispage " id="banner-animais">
     `;
     container.innerHTML += bannerHtml;
     }
-    
 }
-
 
 function injetandoProdutosNoHtml(produtos, categoria, containerSeletor){
 
@@ -116,10 +112,11 @@ function injetandoProdutosNoHtml(produtos, categoria, containerSeletor){
             <p>${produto.titulo}</p>
             <h3>${formatarPreco(produto.preco)}</h3>
             <p>Em até 5x no cartão.</p>
-            <button class="button" data-id="${produto.id}">Adicionar ao carrinho</button>
+            <button type="button" class="button" data-id="${produto.id}">Adicionar ao carrinho</button>
         </div>
         `;
         container.innerHTML +=produtoHTML;
+        console.log(produtoHTML)
     });
 }
 
@@ -170,8 +167,11 @@ function adicionarAoCarrinho(event) {
     }
 }
 
-document.addEventListener("click", (event) => {
-    if (event.target.classList.contains("button")) {
-        adicionarAoCarrinho(event);
-    }
+// Após injetar os produtos no HTML
+const botoesAdicionarCarrinho = document.querySelectorAll(".product__button");
+botoesAdicionarCarrinho.forEach(button => {
+    button.addEventListener("click", adicionarAoCarrinho);
 });
+
+
+
