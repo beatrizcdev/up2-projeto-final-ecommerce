@@ -81,7 +81,7 @@ function atualizarCarrinho(produtosCarregados){
                 </div>
               </div>
             </div>
-                <button type="button" class="carrinho_lixeira${produto.idProduto}" onclick="removerDoCarrinho('${produto.idProduto}')">
+                <button type="button" class="carrinho_lixeira" onclick="removerDoCarrinho('${produto.idProduto}')">
                     <img src="./imagens/Trash.svg" alt="">
                 </button>
           </div>
@@ -140,7 +140,7 @@ function somarConta() {
                 <span>${formatarPreco(total)}</span>
               </div>
           </div>
-          <div id="carrinho_finalizarCompra">
+          <div id="carrinho_finalizarCompra" style="margin: 0;">
             <button class="carrinho_finalizarCompra">Finalizar compra</button>
           </div>
       `;
@@ -184,6 +184,8 @@ window.removerDoCarrinho = function(idProduto) {
 
       console.log(`Produto ${idProduto} excluído do carrinho.`);
       atualizarCarrinho(produtosNoCarrinho);
+      somarConta();
+      atualizarQuantidadeItensCarrinho();
   } catch (error) {
       console.error("Erro ao excluir o produto:", error);
   }

@@ -142,6 +142,12 @@ function adicionarAoCarrinho(){
     localStorage.setItem('carrinho', JSON.stringify(carrinho));
 
     alert(`${produtoCarrinho.nome} foi adicionado ao carrinho com sucesso.`);
+
+    document.querySelector("#observation").value = '';
+    document.querySelector("#product__quantity_number").value = 1;
+
+    const produtosNoCarrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+    atualizarCarrinho(produtosNoCarrinho);
 }
 
 document.querySelector(".product__button").addEventListener("click", adicionarAoCarrinho);
