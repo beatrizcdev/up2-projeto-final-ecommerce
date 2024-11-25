@@ -50,13 +50,13 @@ function exibirPaginaPorTipo(produtos, tipo, containerSeletor) {
     produtosFiltrados.forEach(produto => {
         const produtoHTML = `
         <div class="animais-tipo-item">
-            <a href="./animais.html?p=${produto.id}">
+            <a href="./pagina.html?p=${produto.id}">
                 <img src="${produto.imagem}" alt="${produto.titulo}">
-            </a>
             <p>${produto.titulo}</p>
             <h3>${formatarPreco(produto.preco)}</h3>
             <p>Em até 5x no cartão.</p>
-            <button data-id="${produto.id}" class="product__button">Adicionar ao carrinho</button>
+            <button data-id="${produto.id}" class="product__button">Comprar</button>
+            </a>
         </div>
         `;
         container.innerHTML += produtoHTML;
@@ -109,74 +109,18 @@ function injetandoProdutosNoHtml(produtos, categoria, containerSeletor) {
     produtosFiltrados.forEach(produto => {
         const produtoHTML = `
         <div class="animais-tipo-item">
-            <a href="./animais.html?p=${produto.id}">
+            <a href="./produto.html?p=${produto.id}">
                 <img src="${produto.imagem}" alt="${produto.titulo}">
-            </a>
             <p>${produto.titulo}</p>
             <h3>${formatarPreco(produto.preco)}</h3>
             <p>Em até 5x no cartão.</p>
-            <button type="button" class="button" data-id="${produto.id}">Adicionar ao carrinho</button>
+            <button type="button" class="button" data-id="${produto.id}">Comprar</button>
+            </a>
         </div>
         `;
         container.innerHTML += produtoHTML;
 
-        const botaoAdicionar = container.querySelector(`.product__button[data-id="${produto.id}"]`);
-
-        if (botaoAdicionar) {
-            botaoAdicionar.addEventListener('click', function () {
-                adicionarAoCarrinho(produto.id);
-            });
-        }
     });
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    document.body.classList.add('loaded');
-});
-
-function adicionarAoCarrinho(event) {
-    try {
-        const button = event.target;
-        const idProduto = button.getAttribute('data-id');
-        if (!idProduto) {
-            console.error("ID do produto não encontrado");
-            return;
-        }
-
-        const produto = produtos.find((item) => item.id === idProduto);
-        if (!produto) {
-            console.error("Produto não encontrado no banco de dados local");
-            return;
-        }
-
-        const produtoCarrinho = {
-            idProduto: produto.id,
-            nome: produto.titulo,
-            imagem: produto.imagem,
-            preco: produto.preco,
-            tipo: produto.tipo,
-            quantidade: 1,
-            descricao: produto.descricao
-        };
-
-        let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-
-        const produtoExistente = carrinho.find(item => item.idProduto === produtoCarrinho.idProduto);
-        if (produtoExistente) {
-            produtoExistente.quantidade += 1;
-        } else {
-            carrinho.push(produtoCarrinho);
-        }
-
-        localStorage.setItem('carrinho', JSON.stringify(carrinho));
-
-        // Exibindo mensagem de sucesso
-        alert(`${produto.titulo} foi adicionado ao carrinho com sucesso.`);
-    } catch (error) {
-        console.error("Erro ao adicionar produto ao carrinho:", error);
-        alert("Ocorreu um erro ao adicionar o produto ao carrinho. Tente novamente.");
-    }
-    carregarCarrinho();
 }
 
 injetarBannerHtml();
