@@ -838,6 +838,4 @@ const produtos = [
     }
 ];
 
-const carrinho = [];
-
-export {produtos, carrinho};
+export {produtos};

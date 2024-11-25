@@ -30,6 +30,11 @@ function carregarCarrinho() {
   try {
     const produtosCarregados = JSON.parse(localStorage.getItem('carrinho')) || [];
 
+    if (!Array.isArray(produtosCarregados)) {
+      console.error("Dados do carrinho estão corrompidos ou não são um array.");
+      return;
+    }
+
     if (produtosCarregados.length === 0) {
       console.log("Carrinho vazio");
       return;
@@ -53,6 +58,13 @@ function atualizarCarrinho(produtosCarregados){
      // Atualizar o conteúdo do modal
      const carrinhoContainer = document.querySelector("#carrinho_modal .carrinho_section");
      carrinhoContainer.innerHTML = '';
+
+     if (!produtosCarregados || produtosCarregados.length === 0) {
+      console.log("Carrinho vazio ou inválido.");
+      return;
+    }
+
+    console.log(produtosCarregados);
  
      produtosCarregados.forEach(produto => {
          const carrinhoItem = document.createElement("div");
@@ -61,24 +73,24 @@ function atualizarCarrinho(produtosCarregados){
          carrinhoItem.innerHTML = `
           <div class="carrinho_section_parte1">
             <div class="carrinho_section_baseProduto">
-              <img src="${produto.imagem}" alt="${produto.titulo}" id="carrinho_imagem_produto">
+              <img src="${produto.imagem}" alt="${produto.nome}" id="carrinho_imagem_produto">
               <div class="carrinho_produtoDescricao">
-                <p>${produto.titulo}</p>
+                <p>${produto.nome}</p>
                 <div class="carrinho_tag">
                   <span class="carrinho_produtoTagTexto">${produto.tipo}</span>
                 </div>
               </div>
             </div>
-                <button type="button" class="carrinho_lixeira" onclick="removerDoCarrinho('${produto.idProduto}')">
-                    <img src="./image/Trash.svg" alt="">
+                <button type="button" class="carrinho_lixeira${produto.idProduto}" onclick="removerDoCarrinho('${produto.idProduto}')">
+                    <img src="../imagens/Trash.svg" alt="">
                 </button>
           </div>
           <div class="carrinho_valorProduto">
             <h2 id="carrinho_preco_produto">${formatarPreco(produto.preco)}</h2>
             <div class="carrinho_seletorDeQuantidade">
-              <button class="btn-minus" data-id="${produto.idProduto}"><img src="./image/Minus.svg" alt="diminuir"></button>
+              <button class="btn-minus" data-id="${produto.idProduto}"><img src="../imagens/Minus.svg" alt="diminuir"></button>
               <span id="carrinho_produto_quantidade">${produto.quantidade}</span>
-              <button class="btn-plus" data-id="${produto.idProduto}"><img src="./image/Plus.svg" alt="aumentar"></button>
+              <button class="btn-plus" data-id="${produto.idProduto}"><img src="../imagens/Plus.svg" alt="aumentar"></button>
             </div>
         `;
         carrinhoContainer.appendChild(carrinhoItem);
@@ -86,36 +98,27 @@ function atualizarCarrinho(produtosCarregados){
 
     atualizarQuantidadeItensCarrinho();
     somarConta();
-    salvarCarrinho();
-}
-
-function salvarCarrinho() {
-  localStorage.setItem('produtosNoCarrinho', JSON.stringify(produtosNoCarrinho));
 }
 
 function somarConta() {
   try {
-      // Buscar produtos do Local Storage
       const produtosNoCarrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
       let subtotal = 0;
-      const frete = 0; // Pode ser configurado dinamicamente se necessário
+      const frete = 0;
 
       // Calcular subtotal
       for (const produto of produtosNoCarrinho) {
           subtotal += produto.preco * produto.quantidade;
       }
 
-      // Calcula o valor total
       const total = subtotal + frete;
 
-      // Selecionar o container onde os valores serão exibidos
       const carrinhoValores = document.querySelector(".carrinho_footer");
       if (!carrinhoValores) {
           console.error("Container '.carrinho_footer' não encontrado.");
           return;
       }
 
-      // Limpar o conteúdo atual
       carrinhoValores.innerHTML = "";
 
       // Criar e adicionar os valores ao carrinho
@@ -141,8 +144,6 @@ function somarConta() {
             <button class="carrinho_finalizarCompra">Finalizar compra</button>
           </div>
       `;
-
-      // Adicionar o novo HTML ao container
       carrinhoValores.appendChild(carrinhoPrecos);
 
   } catch (error) {
@@ -150,9 +151,9 @@ function somarConta() {
   }
 }
 
-
 function atualizarQuantidadeItensCarrinho() {
    
+    const produtosNoCarrinho = JSON.parse(localStorage.getItem('carrinho'));
     const quantidadeTotal = produtosNoCarrinho.reduce((total, produto) => total + produto.quantidade, 0);
 
     const quantidadeItensElemento = document.querySelector("#carrinho_quantidadeItens");
@@ -164,8 +165,43 @@ function atualizarQuantidadeItensCarrinho() {
     }
 }
 
-function injetarHtmldoCarrinho(){
+window.removerDoCarrinho = function(idProduto) {
+  try {
+      const produtosNoCarrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+    
+      if (produtosNoCarrinho.length === 0) {
+          console.log("Carrinho está vazio.");
+          return;
+      }
+      const produtoFrontendIndex = produtosNoCarrinho.findIndex(p => p.idProduto === idProduto);
 
-};
+      if (produtoFrontendIndex === -1) {
+          console.error("Produto não encontrado no carrinho:", idProduto);
+          return;
+      }
+      produtosNoCarrinho.splice(produtoFrontendIndex, 1);
+      localStorage.setItem('carrinho', JSON.stringify(produtosNoCarrinho));
 
-export{injetarHtmldoCarrinho};
+      console.log(`Produto ${idProduto} excluído do carrinho.`);
+      atualizarCarrinho(produtosNoCarrinho);
+  } catch (error) {
+      console.error("Erro ao excluir o produto:", error);
+  }
+}
+
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  const botaoExcluir = document.querySelector(`.carrinho_lixeira`);
+  if (botaoExcluir) {
+      botaoExcluir.addEventListener("click", removerDoCarrinho(idProduto));
+      somarConta();
+      atualizarCarrinho();
+      atualizarQuantidadeItensCarrinho();
+  }
+});
+
+
+carregarCarrinho();
+
+export{carregarCarrinho};
+

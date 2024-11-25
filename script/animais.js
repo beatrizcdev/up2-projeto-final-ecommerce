@@ -1,52 +1,52 @@
-import {produtos} from './bancoDeDados.js';
+import { produtos } from './bancoDeDados.js';
+import { carregarCarrinho } from './carrinho.js';
 
 const params = new URLSearchParams(window.location.search);
 const idCategoria = params.get('categoria');
-if(idCategoria === 'Suprimentos'){
+if (idCategoria === 'Suprimentos') {
     exibirPaginaPorTipo(produtos, idCategoria, '.animais-tipo');
 }
-if(idCategoria){
+if (idCategoria) {
     console.log('ID categoria: ', idCategoria);
-}else{
+} else {
     console.log('Não há id de produto na url');
-    exibirPaginaPorTipo(produtos, 'animal', '.animais-tipo' );
+    exibirPaginaPorTipo(produtos, 'animal', '.animais-tipo');
 }
 
-//formatando o preço
-function formatarPreco(preco){
+// formatando o preço
+function formatarPreco(preco) {
     return new Intl.NumberFormat('pt-BR', {
         style: 'currency',
         currency: 'BRL',
         minimumFractionDigits: 2,
         maximumFractionDigits: 2
-    }).format(preco)
+    }).format(preco);
 }
 
-function exibirPaginaPorTipo(produtos, tipo, containerSeletor){
+function exibirPaginaPorTipo(produtos, tipo, containerSeletor) {
     injetarBannerHtml();
-    //selecionando o container
+    // selecionando o container
     const container = document.querySelector(containerSeletor);
 
-    if(!container){
-        console.error(`container com seletor "${containerSeletor} não encontrado"`);
+    if (!container) {
+        console.error(`Container com seletor "${containerSeletor}" não encontrado`);
         return;
     }
 
-    //filtrar categoria
+    // filtrar categoria
     let produtosFiltrados;
-    
-    if(tipo !== 'animal'){
-        produtosFiltrados = produtos.filter(produto =>{
+
+    if (tipo !== 'animal') {
+        produtosFiltrados = produtos.filter(produto => {
             return produto.tipo !== 'animal';
         });
-    }
-    else{
+    } else {
         produtosFiltrados = produtos.filter(produto => {
-        return produto.tipo === tipo;
-    });
-}
+            return produto.tipo === tipo;
+        });
+    }
 
-    //gerando e injetando no html
+    // gerando e injetando no html
     produtosFiltrados.forEach(produto => {
         const produtoHTML = `
         <div class="animais-tipo-item">
@@ -59,50 +59,53 @@ function exibirPaginaPorTipo(produtos, tipo, containerSeletor){
             <button data-id="${produto.id}" class="product__button">Adicionar ao carrinho</button>
         </div>
         `;
-        container.innerHTML +=produtoHTML;
-    });   
+        container.innerHTML += produtoHTML;
+
+        // Selecionando o botão de adicionar ao carrinho
+        const botaoAdicionar = container.querySelector(`.product__button[data-id="${produto.id}"]`);
+        if (botaoAdicionar) {
+            botaoAdicionar.addEventListener('click', function () {
+                adicionarAoCarrinho(produto.id);
+            });
+        }
+    });
 }
 
-function injetarBannerHtml(){
+function injetarBannerHtml() {
     const container = document.querySelector(".animais-main");
 
-    if(!container){
-        console.error(`container com seletor "${container} não encontrado"`);
-        
+    if (!container) {
+        console.error(`Container com seletor "${container}" não encontrado`);
     }
-    if(idCategoria !== 'Suprimentos' && idCategoria !== null){
 
-    const bannerHtml = `
-    <img src="../imagens/animais-${idCategoria}-banner.svg" alt="banner animaispage " id="banner-animais">
-    `;
-    container.innerHTML += bannerHtml;
-
-    }else{
-
-    container.innerHTML = '';
+    if (idCategoria !== 'Suprimentos' && idCategoria !== null) {
+        const bannerHtml = `
+        <img src="../imagens/animais-${idCategoria}-banner.svg" alt="banner animaispage " id="banner-animais">
+        `;
+        container.innerHTML += bannerHtml;
+    } else {
+        container.innerHTML = '';
         const bannerHtml = `
         <img src="../imagens/home-banner-main.svg" alt="banner animaispage " id="banner-animais">
-    `;
-    container.innerHTML += bannerHtml;
+        `;
+        container.innerHTML += bannerHtml;
     }
 }
 
-function injetandoProdutosNoHtml(produtos, categoria, containerSeletor){
-
-    //selecionando o container
+function injetandoProdutosNoHtml(produtos, categoria, containerSeletor) {
     const container = document.querySelector(containerSeletor);
 
-    if(!container){
-        console.error(`container com seletor "${container} não encontrado"`);
+    if (!container) {
+        console.error(`Container com seletor "${containerSeletor}" não encontrado`);
         return;
     }
 
-    //filtrar categoria
+    // filtrar categoria
     const produtosFiltrados = produtos.filter(produto => {
         return produto.categoria === categoria;
     });
 
-    //gerando e injetando no html
+    // gerando e injetando no html
     produtosFiltrados.forEach(produto => {
         const produtoHTML = `
         <div class="animais-tipo-item">
@@ -115,13 +118,17 @@ function injetandoProdutosNoHtml(produtos, categoria, containerSeletor){
             <button type="button" class="button" data-id="${produto.id}">Adicionar ao carrinho</button>
         </div>
         `;
-        container.innerHTML +=produtoHTML;
-        console.log(produtoHTML)
+        container.innerHTML += produtoHTML;
+
+        const botaoAdicionar = container.querySelector(`.product__button[data-id="${produto.id}"]`);
+
+        if (botaoAdicionar) {
+            botaoAdicionar.addEventListener('click', function () {
+                adicionarAoCarrinho(produto.id);
+            });
+        }
     });
 }
-
-injetarBannerHtml();
-injetandoProdutosNoHtml(produtos, idCategoria, '.animais-tipo');
 
 document.addEventListener('DOMContentLoaded', () => {
     document.body.classList.add('loaded');
@@ -129,8 +136,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function adicionarAoCarrinho(event) {
     try {
-        // Obtendo o ID do produto da URL
-        const idProduto = event.target.getAttribute('data-id');
+        const button = event.target;
+        const idProduto = button.getAttribute('data-id');
         if (!idProduto) {
             console.error("ID do produto não encontrado");
             return;
@@ -147,31 +154,30 @@ function adicionarAoCarrinho(event) {
             nome: produto.titulo,
             imagem: produto.imagem,
             preco: produto.preco,
-            categoria: produto.categoria,
+            tipo: produto.tipo,
             quantidade: 1,
             descricao: produto.descricao
         };
 
         let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
 
-        carrinho.push(produtoCarrinho);
+        const produtoExistente = carrinho.find(item => item.idProduto === produtoCarrinho.idProduto);
+        if (produtoExistente) {
+            produtoExistente.quantidade += 1;
+        } else {
+            carrinho.push(produtoCarrinho);
+        }
 
         localStorage.setItem('carrinho', JSON.stringify(carrinho));
 
         // Exibindo mensagem de sucesso
         alert(`${produto.titulo} foi adicionado ao carrinho com sucesso.`);
-
     } catch (error) {
         console.error("Erro ao adicionar produto ao carrinho:", error);
         alert("Ocorreu um erro ao adicionar o produto ao carrinho. Tente novamente.");
     }
+    carregarCarrinho();
 }
 
-// Após injetar os produtos no HTML
-const botoesAdicionarCarrinho = document.querySelectorAll(".product__button");
-botoesAdicionarCarrinho.forEach(button => {
-    button.addEventListener("click", adicionarAoCarrinho);
-});
-
-
-
+injetarBannerHtml();
+injetandoProdutosNoHtml(produtos, idCategoria, '.animais-tipo');
