@@ -153,7 +153,12 @@ function somarConta() {
 
 function atualizarQuantidadeItensCarrinho() {
    
-    const produtosNoCarrinho = JSON.parse(localStorage.getItem('carrinho'));
+    const produtosNoCarrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+
+    if (produtosNoCarrinho.length === 0) {
+      document.querySelector("#carrinho_quantidadeItens").textContent = "0 ítens";
+      return;
+    }
     const quantidadeTotal = produtosNoCarrinho.reduce((total, produto) => total + produto.quantidade, 0);
 
     const quantidadeItensElemento = document.querySelector("#carrinho_quantidadeItens");
@@ -199,6 +204,70 @@ document.addEventListener('DOMContentLoaded', (event) => {
       somarConta();
       atualizarCarrinho();
       atualizarQuantidadeItensCarrinho();
+  }
+});
+
+function limparCarrinho() {
+  let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+  console.log("Carrinho atual no localStorage:", carrinho);
+
+  if (carrinho.length === 0) {
+      alert("Carrinho já está vazio.");
+      return;
+  }
+
+  localStorage.removeItem('carrinho');
+  console.log("Carrinho limpo do localStorage.");
+
+  const carrinhoContainer = document.querySelector(".carrinho_section");
+  if (carrinhoContainer) {
+      carrinhoContainer.innerHTML = '';
+  }
+  atualizarCarrinho(carrinho);
+
+  console.log("Carrinho foi completamente limpo.");
+}
+
+
+function excluirTudo(event) {
+  event.preventDefault();
+
+  if (event) {
+      const elementoClicado = event.target.closest(".carrinho_excluirTudo");
+      if (!elementoClicado) return;
+  }
+
+  limparCarrinho();
+  atualizarCarrinho(); 
+  atualizarQuantidadeItensCarrinho();
+}
+
+function finalizarCompra(event) {
+
+  let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+
+  if (carrinho.length === 0) {
+      alert("Seu carrinho está vazio. Adicione produtos antes de finalizar a compra.");
+      return;
+  }
+
+  alert(`Compra Realizada com sucesso.`);
+  limparCarrinho();
+  atualizarCarrinho();
+  atualizarQuantidadeItensCarrinho();
+}
+
+document.addEventListener("click", (event) => {
+  if (event.target.closest(".carrinho_finalizarCompra")) {
+      finalizarCompra(event);
+  }
+});
+
+document.addEventListener('DOMContentLoaded', (event) =>{
+  const botaoExcluirTudo = document.querySelector(".carrinho_excluirTudo");
+  if (botaoExcluirTudo) {
+      botaoExcluirTudo.addEventListener("click", excluirTudo);
+      
   }
 });
 
