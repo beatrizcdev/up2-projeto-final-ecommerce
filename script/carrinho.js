@@ -1,5 +1,3 @@
-//import { produtos, carrinho } from "./bancoDeDados";
-
 const modal = document.querySelector("#carrinho_modal");
 const openModal = document.querySelector("#carrinho_open");
 const closeModal = document.querySelector(".carrinho_out");

@@ -16,6 +16,33 @@ function formatarPreco(preco) {
     }).format(preco);
 }
 
+function criandoLinksParaOsFiltros(containerSeletor){
+    const container = document.querySelector(containerSeletor);
+    if (!container) {
+        console.error(`Container com seletor "${containerSeletor}" não encontrado`);
+        return;
+    }
+
+    if(idCategoria === null){
+        return;
+    }else{
+        container.innerHTML = `
+        <div class="animais-grid-item">
+                <a href="./animais.html?categoria=${encodeURIComponent(idCategoria)}&tipo=animal">
+                <img src="./imagens/lagartoicon-animais.svg" alt="animais"></a>
+            </div>
+            <div class="animais-grid-item">
+                <a href="./animais.html?categoria=${encodeURIComponent(idCategoria)}&tipo=comida">
+                <img src="./imagens/comidaicon-animais.svg" alt="comidas"></a>
+            </div>
+            <div class="animais-grid-item">
+                <a href="./animais.html?categoria=${encodeURIComponent(idCategoria)}&tipo=acessório">
+                <img src="./imagens/outrosicon-animais.svg" alt="acessórios"></a>
+            </div>
+        `
+    }
+}
+
 //exibir paginas por tipo específico
 function injetandoProdutosNoHtmlPorTipo(produtos, tipo, categoria, containerSeletor){
     injetarBannerHtml();
@@ -87,5 +114,6 @@ function injetarBannerHtml() {
     }
 }
 
+criandoLinksParaOsFiltros('.animais-grid-container')
 injetandoProdutosNoHtmlPorTipo(produtos, idTipo, idCategoria, '.animais-tipo')
 export{formatarPreco};
