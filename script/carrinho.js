@@ -196,7 +196,6 @@ window.removerDoCarrinho = function(idProduto) {
   }
 }
 
-
 document.addEventListener('DOMContentLoaded', (event) => {
   const botaoExcluir = document.querySelector(`.carrinho_lixeira`);
   if (botaoExcluir) {

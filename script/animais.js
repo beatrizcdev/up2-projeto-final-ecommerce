@@ -2,16 +2,9 @@ import { produtos } from './bancoDeDados.js';
 import { carregarCarrinho } from './carrinho.js';
 
 const params = new URLSearchParams(window.location.search);
+const idTipo = params.get('tipo');
 const idCategoria = params.get('categoria');
-if (idCategoria === 'Suprimentos') {
-    exibirPaginaPorTipo(produtos, idCategoria, '.animais-tipo');
-}
-if (idCategoria) {
-    console.log('ID categoria: ', idCategoria);
-} else {
-    console.log('Não há id de produto na url');
-    exibirPaginaPorTipo(produtos, 'animal', '.animais-tipo');
-}
+
 
 // formatando o preço
 function formatarPreco(preco) {
@@ -23,25 +16,26 @@ function formatarPreco(preco) {
     }).format(preco);
 }
 
-function exibirPaginaPorTipo(produtos, tipo, containerSeletor) {
+//exibir paginas por tipo específico
+function injetandoProdutosNoHtmlPorTipo(produtos, tipo, categoria, containerSeletor){
     injetarBannerHtml();
-    // selecionando o container
     const container = document.querySelector(containerSeletor);
-
     if (!container) {
         console.error(`Container com seletor "${containerSeletor}" não encontrado`);
         return;
     }
 
-    // filtrar categoria
-    let produtosFiltrados;
+    let produtosFiltrados = produtos;
 
-    if (tipo !== 'animal') {
-        produtosFiltrados = produtos.filter(produto => {
-            return produto.tipo !== 'animal';
+    if(categoria !== null){
+
+       produtosFiltrados = produtos.filter(produto => {
+            return produto.categoria === categoria;
         });
-    } else {
-        produtosFiltrados = produtos.filter(produto => {
+    }
+
+    if(tipo !== null){
+        produtosFiltrados = produtosFiltrados.filter(produto => {
             return produto.tipo === tipo;
         });
     }
@@ -69,6 +63,7 @@ function exibirPaginaPorTipo(produtos, tipo, containerSeletor) {
             });
         }
     });
+
 }
 
 function injetarBannerHtml() {
@@ -92,38 +87,5 @@ function injetarBannerHtml() {
     }
 }
 
-function injetandoProdutosNoHtml(produtos, categoria, containerSeletor) {
-    const container = document.querySelector(containerSeletor);
-
-    if (!container) {
-        console.error(`Container com seletor "${containerSeletor}" não encontrado`);
-        return;
-    }
-
-    // filtrar categoria
-    const produtosFiltrados = produtos.filter(produto => {
-        return produto.categoria === categoria;
-    });
-
-    // gerando e injetando no html
-    produtosFiltrados.forEach(produto => {
-        const produtoHTML = `
-        <div class="animais-tipo-item">
-            <a href="./produto.html?p=${produto.id}">
-                <img src="${produto.imagem}" alt="${produto.titulo}">
-            <p>${produto.titulo}</p>
-            <h3>${formatarPreco(produto.preco)}</h3>
-            <p>Em até 5x no cartão.</p>
-            <button type="button" class="button" data-id="${produto.id}">Comprar</button>
-            </a>
-        </div>
-        `;
-        container.innerHTML += produtoHTML;
-
-    });
-}
-
-injetarBannerHtml();
-injetandoProdutosNoHtml(produtos, idCategoria, '.animais-tipo');
-
+injetandoProdutosNoHtmlPorTipo(produtos, idTipo, idCategoria, '.animais-tipo')
 export{formatarPreco};
