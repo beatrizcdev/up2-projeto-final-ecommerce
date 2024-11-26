@@ -1,0 +1,117 @@
+.suporte-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url("../imagens/Fundo-branco-verde.svg") no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+  padding-top: 100px;
+  margin: 0;
+}
+
+.suporte-main {
+  margin-top: 40px;
+  padding-top: 10px;
+  max-width: 1000px;
+  font-size: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 32px;
+  align-items: start;
+}
+
+.caixa-mensagem {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(253, 166, 115);
+  border-radius: 8px;
+  width: 500px;
+  color: white;
+}
+
+.caixa-mensagem .titulo-caixa-mensagem {
+  padding: 24px 32px;
+  font-size: 24px;
+  border-bottom: thin solid rgb(170, 98, 56);
+}
+
+.caixa-mensagem form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  flex-wrap: wrap;
+  padding: 32px;
+}
+
+.caixa-mensagem input,
+.caixa-mensagem textarea {
+  width: calc(50% - 8px);
+  height: 48px;
+  border-radius: 8px;
+  border: thin solid rgb(170, 98, 56);
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+.caixa-mensagem input:first-child {
+  margin-right: 16px;
+}
+
+.caixa-mensagem input[name="assunto"] {
+  width: 100%;
+}
+
+.caixa-mensagem textarea {
+  width: 405px;
+  height: 180px;
+  padding: 16px;
+}
+
+.caixa-mensagem button {
+  display: block;
+  border: none;
+  outline: none;
+  width: 180px;
+  height: 48px;
+  border-radius: 8px;
+  background-color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.suporte-texto {
+  color: rgb(170, 98, 56);
+}
+
+#paragrafo-suporte {
+  color: rgb(27, 54, 24);
+}
+
+.fale-conosco {
+  margin-top: 70px;
+  background-color: rgb(177, 224, 164);
+  padding: 16px;
+  border-radius: 8px;
+  color: white;
+}
+
+.fale-conosco h3 {
+  margin: 0;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: thin solid rgb(99, 199, 99);
+}
+
+.fale-conosco p {
+  color: white;
+}
+
+.fale-conosco ul,
+.fale-conosco li {
+  padding: 0px;
+  margin: 0px;
+}
+
+
