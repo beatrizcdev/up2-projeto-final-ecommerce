@@ -3,6 +3,10 @@ const openModal = document.querySelector("#carrinho_open");
 const closeModal = document.querySelector(".carrinho_out");
 const fade = document.querySelector("#fade")
 
+window.addEventListener('load', function() {
+  document.body.classList.add('loaded');
+});
+
 //abrir e fechar o modal
 const toggleModal = () =>{
     modal.classList.toggle("hide");
