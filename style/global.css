@@ -8,7 +8,8 @@ body{
     padding: 0;
     margin: 0;
     background: linear-gradient(to top, var(--begePadrao), var(--verdeFundo));
-    max-height: fit-content;    
+    max-height: fit-content;
+    overflow-x: 0;
 }
 
 ul{
