@@ -1,7 +1,7 @@
-const botaoVoltarAoTopo = document.querySelector('.nav-aside');
+const botaoVoltarAoTopo = document.querySelector('.voltarAoTopo');
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 400) {
+    if (window.scrollY > 300) {
         botaoVoltarAoTopo.style.display = 'block';
     } else {
         botaoVoltarAoTopo.style.display = 'none';
