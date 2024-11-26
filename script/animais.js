@@ -5,6 +5,9 @@ const params = new URLSearchParams(window.location.search);
 const idTipo = params.get('tipo');
 const idCategoria = params.get('categoria');
 
+console.log('categoria: ', idCategoria);
+console.log('tipo: ', idTipo);
+
 
 // formatando o preço
 function formatarPreco(preco) {
@@ -56,9 +59,16 @@ function injetandoProdutosNoHtmlPorTipo(produtos, tipo, categoria, containerSele
 
     if(categoria !== null){
 
-       produtosFiltrados = produtos.filter(produto => {
-            return produto.categoria === categoria;
-        });
+        if(categoria === 'Suprimentos'){
+            produtosFiltrados = produtosFiltrados.filter(produto => {
+                return produto.tipo !== 'animal';
+            });
+        }else{
+            produtosFiltrados = produtos.filter(produto => {
+                return produto.categoria === categoria;
+            });
+        }
+
     }
 
     if(tipo !== null){
@@ -113,6 +123,23 @@ function injetarBannerHtml() {
         container.innerHTML += bannerHtml;
     }
 }
+
+const botaoVoltarAoTopo = document.querySelector('.voltarAoTopo');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 500) {
+        botaoVoltarAoTopo.style.display = 'block';
+    } else {
+        botaoVoltarAoTopo.style.display = 'none';
+    }
+});
+
+botaoVoltarAoTopo.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
 
 criandoLinksParaOsFiltros('.animais-grid-container')
 injetandoProdutosNoHtmlPorTipo(produtos, idTipo, idCategoria, '.animais-tipo')

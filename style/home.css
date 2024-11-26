@@ -45,4 +45,44 @@
     border-radius: 10px;
 }
 
+.voltarAoTopo {
+    display: none;
+    position: fixed;
+    right: 20px; 
+    bottom: 80px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; 
+    cursor: pointer;
+    z-index: 1000;
+    transition: opacity 0.5s ease;
+}
+
+.voltarAoTopo img {
+    width: 50px; 
+    height: 50px;
+    pointer-events: none;
+}
+
+
+.voltarAoTopo, .whatsapp{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.whatsapp {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    z-index: 1000;
+}
 
