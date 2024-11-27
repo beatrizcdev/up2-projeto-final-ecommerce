@@ -52,7 +52,6 @@ const botaoVerMais = document.querySelector('#botao_ver_mais');
 
 //exibir paginas por tipo específico
 function injetandoProdutosNoHtmlPorTipo(produtos, tipo, categoria, containerSeletor){
-    injetarBannerHtml();
     const container = document.querySelector(containerSeletor);
     if (!container) {
         console.error(`Container com seletor "${containerSeletor}" não encontrado`);
@@ -81,9 +80,20 @@ function injetandoProdutosNoHtmlPorTipo(produtos, tipo, categoria, containerSele
         });
     }
 
+    if(produtosFiltrados.length === 0){
+        const produtoHTML = `
+        <h3> Parece que não temos nada poraqui...</h3>`
+        container.innerHTML += produtoHTML;
+        botaoVerMais.style.display = 'none';
+        return;
+    }
+
+    const inicio = quantidadeAtual-limiteInicial;
+    const fim = Math.min(quantidadeAtual, produtosFiltrados.length);
 
     // gerando e injetando no html
-    produtosFiltrados.slice(0, quantidadeAtual).forEach(produto => {
+    for(let i = inicio; i<quantidadeAtual && i<produtosFiltrados.length; i++){
+        const produto = produtosFiltrados[i];
         const produtoHTML = `
         <div class="animais-tipo-item">
             <a href="./produto.html?p=${produto.id}">
@@ -96,10 +106,15 @@ function injetandoProdutosNoHtmlPorTipo(produtos, tipo, categoria, containerSele
         </div>
         `;
         container.innerHTML += produtoHTML;
+    };
 
-    });
-
+    if(quantidadeAtual >=produtosFiltrados.length){
+        botaoVerMais.style.display = 'none';
+    }else{
+        botaoVerMais.style.display = 'block';
+    }
 }
+
 
 botaoVerMais.addEventListener('click', () => {
     quantidadeAtual += limiteInicial;
@@ -145,5 +160,6 @@ botaoVoltarAoTopo.addEventListener('click', () => {
 });
 
 criandoLinksParaOsFiltros('.animais-grid-container')
-injetandoProdutosNoHtmlPorTipo(produtos, idTipo, idCategoria, '.animais-tipo')
+injetandoProdutosNoHtmlPorTipo(produtos, idTipo, idCategoria, '.animais-tipo');
+injetarBannerHtml();
 export{formatarPreco};
