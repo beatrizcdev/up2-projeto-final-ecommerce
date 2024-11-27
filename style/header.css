@@ -51,3 +51,26 @@ nav ul{
     width: 40px;
     height: 40px;
 }
+
+@media (max-width: 600px) {
+
+    nav{
+        width: 100px;
+    }
+
+    .texto{
+        display: none;
+    }
+
+    nav a{
+        margin: 15px;
+    }
+    
+    header img{
+        height: 40px;
+    }
+
+    .opcoes-extra img{
+        height: 30px;
+    }
+}

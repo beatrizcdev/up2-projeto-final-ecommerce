@@ -75,3 +75,20 @@ section.carrossel {
     margin-left: -50%;
 }
 
+@media (max-width: 600px) {
+    
+    .img-carrossel{
+        width: 50px;
+        height: 50px;
+    }
+
+    .nav-manual, .nav-auto{
+        margin-top: 100px;
+    }
+
+    .carrossel-content{
+        height: fit-content;
+        margin-bottom: 30px;
+    }  
+}
+
