@@ -621,15 +621,6 @@ const produtos = [
         descricao: "Gaiola ideal para abrigar pardais, proporcionando conforto e segurança."
     },
     {
-        id: "78",
-        titulo: "Gaiola para Pardal",
-        preco: 50,
-        categoria: "Aves",
-        tipo: "acessório",
-        imagem: '../imagens/bancoDeDados-id-78.svg',
-        descricao: "Gaiola ideal para abrigar pardais, proporcionando conforto e segurança."
-    },
-    {
         id: "79",
         titulo: "Comedouro para Sabiá",
         preco: 15,
