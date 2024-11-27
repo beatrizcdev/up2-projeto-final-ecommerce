@@ -90,5 +90,10 @@ section.carrossel {
         height: fit-content;
         margin-bottom: 30px;
     }  
+
+    .auto-btn1, .auto-btn2, .auto-btn3, .manual-btn{
+        height: 1px;
+        width: 1px;
+    }
 }
 

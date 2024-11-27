@@ -30,6 +30,7 @@ function injetarFooter(){
           <li>Telefone: 81 99999-9999</li>
           <li>E-mail: mundoexotico@email.com</li>
           <li>Endereço: Rua das Rosas, Paratibe.</li>
+          <li>Instagram: @mundoexótico</li>
         </ul>
       </div>
 

@@ -75,15 +75,58 @@
     position: fixed;
     right: 20px;
     bottom: 20px;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     z-index: 1000;
 }
 
+@media (max-width: 600px) {
+    .home-container-propaganda{
+        max-width: 130px;
+        padding: 15px;
+    }
 
+    .home-container-propaganda img{
+        max-width: 130px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .home-container-propaganda h3{
+        display: none;
+    }
+    .propagandas{
+        margin: 2px 20px;
+        padding: 0px;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .propaganda-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        justify-items: center;
+    }
+
+    .whatsapp{
+        width: 42px;
+        height: 40px;
+        box-shadow: none;
+    }
+
+    #voltarAoTopo img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .voltarAoTopo {
+        bottom: 60px;
+    }
+
+}
