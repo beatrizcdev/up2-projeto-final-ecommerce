@@ -143,10 +143,12 @@ footer {
 
   .contatos-footer{
     text-align: center;
+    font-size: 15px;
   }
 
   .pagamentos{
     margin-top: 30px;
+    font-size: 15px;
   }
 
   .pagamentos-grid img{
