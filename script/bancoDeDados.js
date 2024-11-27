@@ -595,7 +595,7 @@ const produtos = [
     {
         id: "93",
         titulo: "Aquário para Carpas",
-        preco: 500,
+        preco: 100,
         categoria: "Peixes",
         tipo: "acessório",
         imagem: '../imagens/bancoDeDados-id-93.svg',
@@ -630,7 +630,7 @@ const produtos = [
     },
     {
         id: "97",
-        titulo: "Casinha Flutuante para Cágados",
+        titulo: "aquaterrário para Cágados",
         preco: 150,
         categoria: "Cágados",
         tipo: "acessório",
