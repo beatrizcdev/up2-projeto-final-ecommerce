@@ -46,6 +46,10 @@ function criandoLinksParaOsFiltros(containerSeletor){
     }
 }
 
+const limiteInicial = 12;
+let quantidadeAtual = limiteInicial;
+const botaoVerMais = document.querySelector('#botao_ver_mais');
+
 //exibir paginas por tipo específico
 function injetandoProdutosNoHtmlPorTipo(produtos, tipo, categoria, containerSeletor){
     injetarBannerHtml();
@@ -77,8 +81,9 @@ function injetandoProdutosNoHtmlPorTipo(produtos, tipo, categoria, containerSele
         });
     }
 
+
     // gerando e injetando no html
-    produtosFiltrados.forEach(produto => {
+    produtosFiltrados.slice(0, quantidadeAtual).forEach(produto => {
         const produtoHTML = `
         <div class="animais-tipo-item">
             <a href="./produto.html?p=${produto.id}">
@@ -92,16 +97,14 @@ function injetandoProdutosNoHtmlPorTipo(produtos, tipo, categoria, containerSele
         `;
         container.innerHTML += produtoHTML;
 
-        // Selecionando o botão de adicionar ao carrinho
-        const botaoAdicionar = container.querySelector(`.product__button[data-id="${produto.id}"]`);
-        if (botaoAdicionar) {
-            botaoAdicionar.addEventListener('click', function () {
-                adicionarAoCarrinho(produto.id);
-            });
-        }
     });
 
 }
+
+botaoVerMais.addEventListener('click', () => {
+    quantidadeAtual += limiteInicial;
+    injetandoProdutosNoHtmlPorTipo(produtos, idTipo, idCategoria, '.animais-tipo');
+})
 
 function injetarBannerHtml() {
     const container = document.querySelector(".animais-main");

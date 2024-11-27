@@ -105,3 +105,27 @@
     background-color: #ea620e; 
     transform: scale(1.05); 
 }
+
+.botao_ver_mais{
+    display: flex;
+    justify-content: center;
+}
+
+#botao_ver_mais{
+    margin: 20px;
+    padding: 20px;
+    width: 200px;
+    border-radius: 10px;
+    background-color: orange;
+    color: white;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+}
+
+#botao_ver_mais:hover{
+    background-color: #ea620e; 
+    transform: scale(1.05); 
+}
