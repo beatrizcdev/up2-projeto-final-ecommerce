@@ -1,5 +1,6 @@
 import { produtos } from './bancoDeDados.js';
 import { carregarCarrinho } from './carrinho.js';
+import { injetarFooter } from './home.js';
 
 const params = new URLSearchParams(window.location.search);
 const idTipo = params.get('tipo');
@@ -161,5 +162,6 @@ botaoVoltarAoTopo.addEventListener('click', () => {
 
 criandoLinksParaOsFiltros('.animais-grid-container')
 injetandoProdutosNoHtmlPorTipo(produtos, idTipo, idCategoria, '.animais-tipo');
+injetarFooter();
 injetarBannerHtml();
 export{formatarPreco};
