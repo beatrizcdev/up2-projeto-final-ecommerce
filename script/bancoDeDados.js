@@ -243,15 +243,6 @@ const produtos = [
         descricao: "As carpas são peixes de grande porte, originários da Ásia, conhecidos por sua resistência e longevidade. Sua alimentação inclui algas, plantas aquáticas e pequenos invertebrados." 
     },
     { 
-        id: "34", 
-        titulo: "Mestre dos Mares", 
-        preco: 1000, 
-        categoria: "Peixes", 
-        tipo: "animal", 
-        imagem: '../imagens/bancoDeDados-id-34.svg', 
-        descricao: "O mestre dos mares é um peixe raro, conhecido por sua grande força e capacidade de viver em águas profundas e geladas. Sua alimentação é baseada em outros peixes menores e grandes invertebrados marinhos." 
-    },
-    { 
         id: "35", 
         titulo: "Peixe-palhaço", 
         preco: 50, 
@@ -270,15 +261,6 @@ const produtos = [
         descricao: "O goldfish é um peixe ornamental muito comum em aquários domésticos, conhecido por sua cor dourada e comportamento tranquilo. Sua dieta é composta por flocos de ração e vegetação aquática." 
     },
     { 
-        id: "37", 
-        titulo: "Tetra", 
-        preco: 15, 
-        categoria: "Peixes", 
-        tipo: "animal", 
-        imagem: '../imagens/bancoDeDados-id-37.svg', 
-        descricao: "Os tetrás são peixes pequenos e coloridos que habitam águas tropicais. Sua dieta consiste em pequenos invertebrados e algas, sendo muito populares em aquários de água doce." 
-    },
-    { 
         id: "38", 
         titulo: "Axolotl", 
         preco: 350, 
@@ -287,7 +269,6 @@ const produtos = [
         imagem: '../imagens/bancoDeDados-id-38.svg', 
         descricao: "O axolotl é uma espécie de salamandra aquática que mantém suas características larvais durante a fase adulta. Sua dieta inclui vermes, pequenos peixes e outros invertebrados." 
     },
-   
     { 
         id: "40", 
         titulo: "Salamandra", 
@@ -305,15 +286,6 @@ const produtos = [
         tipo: "animal", 
         imagem: '../imagens/bancoDeDados-id-42.svg', 
         descricao: "A iguana-verde é um réptil herbívoro, encontrado em florestas tropicais da América Central e do Sul. Ela se alimenta principalmente de folhas e frutas e pode viver em árvores e arbustos." 
-    },
-    { 
-        id: "43", 
-        titulo: "Cobra-real", 
-        preco: 1200, 
-        categoria: "Répteis", 
-        tipo: "animal", 
-        imagem: '../imagens/bancoDeDados-id-43.svg', 
-        descricao: "A cobra-real é uma das maiores cobras venenosas do mundo, encontrada principalmente no sudeste asiático. Sua dieta inclui outras cobras, pequenos mamíferos e aves." 
     },
     { 
         id: "44", 
@@ -334,15 +306,6 @@ const produtos = [
         descricao: "O jacaré é um grande réptil encontrado em regiões da América do Norte e América Latina. Ele é carnívoro e se alimenta de peixes, mamíferos e aves." 
     },
     { 
-        id: "46", 
-        titulo: "Águia-careca", 
-        preco: 500, 
-        categoria: "Aves", 
-        tipo: "animal", 
-        imagem: '../imagens/bancoDeDados-id-46.svg', 
-        descricao: "A águia-careca é a ave símbolo dos Estados Unidos, conhecida por sua força e visão aguçada. Alimenta-se principalmente de peixes e aves aquáticas, e pode ser encontrada em regiões costeiras e florestas." 
-    },
-    { 
         id: "48", 
         titulo: "Andorinha", 
         preco: 60, 
@@ -352,111 +315,12 @@ const produtos = [
         descricao: "A andorinha é uma pequena ave migratória que se alimenta principalmente de insetos. Ela é conhecida por sua habilidade em voo acrobático e pode ser encontrada em todo o mundo durante a primavera e verão." 
     },
     { 
-        id: "49", 
-        titulo: "Gavião-real", 
-        preco: 750, 
-        categoria: "Aves", 
-        tipo: "animal", 
-        imagem: '../imagens/bancoDeDados-id-49.svg', 
-        descricao: "O gavião-real é uma das maiores aves de rapina, conhecido por sua força e habilidades de caça. Ele se alimenta de mamíferos pequenos, aves e répteis, e é encontrado em florestas e áreas montanhosas." 
-    },
-    { 
         id: "50", 
         titulo: "Condor", 
         preco: 1500, 
         categoria: "Aves", 
         tipo: "animal", 
         imagem: '../imagens/bancoDeDados-id-50.svg', 
-        descricao: "O condor é uma ave de rapina de grande porte, encontrada na América do Norte e do Sul. Sua alimentação é composta por carniça, e é uma das aves com maior envergadura de asas, podendo alcançar até 3 metros." 
-    },
-    { 
-        id: "51", 
-        titulo: "Crocodilo-do-Nilo", 
-        preco: 1500, 
-        categoria: "Répteis", 
-        tipo: "animal", 
-        imagem: '../imagens/bancoDeDados-id-51.svg', 
-        descricao: "O crocodilo-do-Nilo é uma das maiores espécies de crocodilos, encontrado principalmente na África Subsaariana. Alimenta-se de grandes mamíferos, peixes e aves, vivendo em rios e lagos." 
-    },
-    { 
-        id: "52", 
-        titulo: "Iguana-verde", 
-        preco: 200, 
-        categoria: "Répteis", 
-        tipo: "animal", 
-        imagem: '../imagens/bancoDeDados-id-52.svg', 
-        descricao: "A iguana-verde é um réptil herbívoro, encontrado em florestas tropicais da América Central e do Sul. Ela se alimenta principalmente de folhas e frutas e pode viver em árvores e arbustos." 
-    },
-    { 
-        id: "53", 
-        titulo: "Cobra-real", 
-        preco: 1200, 
-        categoria: "Répteis", 
-        tipo: "animal", 
-        imagem: '../imagens/bancoDeDados-id-53.svg', 
-        descricao: "A cobra-real é uma das maiores cobras venenosas do mundo, encontrada principalmente no sudeste asiático. Sua dieta inclui outras cobras, pequenos mamíferos e aves." 
-    },
-    { 
-        id: "54", 
-        titulo: "Camaleão", 
-        preco: 250, 
-        categoria: "Répteis", 
-        tipo: "animal", 
-        imagem: '../imagens/bancoDeDados-id-54.svg', 
-        descricao: "O camaleão é conhecido pela sua habilidade de mudar de cor, uma adaptação para camuflagem. Sua alimentação consiste em insetos, e ele é encontrado em regiões tropicais da África e Ásia." 
-    },
-    { 
-        id: "55", 
-        titulo: "Jacaré", 
-        preco: 800, 
-        categoria: "Répteis", 
-        tipo: "animal", 
-        imagem: '../imagens/bancoDeDados-id-55.svg', 
-        descricao: "O jacaré é um grande réptil encontrado em regiões da América do Norte e América Latina. Ele é carnívoro e se alimenta de peixes, mamíferos e aves." 
-    },
-    { 
-        id: "56", 
-        titulo: "Águia-careca", 
-        preco: 500, 
-        categoria: "Aves", 
-        tipo: "animal", 
-        imagem: '../imagens/bancoDeDados-id-56.svg', 
-        descricao: "A águia-careca é a ave símbolo dos Estados Unidos, conhecida por sua força e visão aguçada. Alimenta-se principalmente de peixes e aves aquáticas, e pode ser encontrada em regiões costeiras e florestas." 
-    },
-    { 
-        id: "57", 
-        titulo: "Pinguim-imperador", 
-        preco: 1000, 
-        categoria: "Aves", 
-        tipo: "animal", 
-        imagem: '../imagens/bancoDeDados-id-57.svg', 
-        descricao: "O pinguim-imperador é a maior espécie de pinguim, encontrado na Antártica. Sua dieta é composta por peixes, krill e outros invertebrados marinhos. Ele é conhecido por suas habilidades de natação." 
-    },
-    { 
-        id: "58", 
-        titulo: "Andorinha", 
-        preco: 60, 
-        categoria: "Aves", 
-        tipo: "animal", 
-        imagem: '../imagens/bancoDeDados-id-58.svg', 
-        descricao: "A andorinha é uma pequena ave migratória que se alimenta principalmente de insetos. Ela é conhecida por sua habilidade em voo acrobático e pode ser encontrada em todo o mundo durante a primavera e verão." 
-    },
-    { 
-        id: "59", 
-        titulo: "Gavião-real", 
-        preco: 750, 
-        categoria: "Aves", 
-        tipo: "animal", 
-        imagem: '../imagens/bancoDeDados-id-59.svg', 
-        descricao: "O gavião-real é uma das maiores aves de rapina, conhecido por sua força e habilidades de caça. Ele se alimenta de mamíferos pequenos, aves e répteis, e é encontrado em florestas e áreas montanhosas." 
-    },
-    { 
-        id: "60", 
-        titulo: "Condor", 
-        preco: 1500, 
-        categoria: "Aves", 
-        tipo: "animal", 
-        imagem: '../imagens/bancoDeDados-id-60.svg', 
         descricao: "O condor é uma ave de rapina de grande porte, encontrada na América do Norte e do Sul. Sua alimentação é composta por carniça, e é uma das aves com maior envergadura de asas, podendo alcançar até 3 metros." 
     },
     { 
