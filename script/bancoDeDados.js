@@ -297,15 +297,6 @@ const produtos = [
         descricao: "O camaleão é conhecido pela sua habilidade de mudar de cor, uma adaptação para camuflagem. Sua alimentação consiste em insetos, e ele é encontrado em regiões tropicais da África e Ásia." 
     },
     { 
-        id: "45", 
-        titulo: "Jacaré", 
-        preco: 800, 
-        categoria: "Répteis", 
-        tipo: "animal", 
-        imagem: '../imagens/bancoDeDados-id-45.svg', 
-        descricao: "O jacaré é um grande réptil encontrado em regiões da América do Norte e América Latina. Ele é carnívoro e se alimenta de peixes, mamíferos e aves." 
-    },
-    { 
         id: "48", 
         titulo: "Andorinha", 
         preco: 60, 
@@ -313,15 +304,6 @@ const produtos = [
         tipo: "animal", 
         imagem: '../imagens/bancoDeDados-id-48.svg', 
         descricao: "A andorinha é uma pequena ave migratória que se alimenta principalmente de insetos. Ela é conhecida por sua habilidade em voo acrobático e pode ser encontrada em todo o mundo durante a primavera e verão." 
-    },
-    { 
-        id: "50", 
-        titulo: "Condor", 
-        preco: 1500, 
-        categoria: "Aves", 
-        tipo: "animal", 
-        imagem: '../imagens/bancoDeDados-id-50.svg', 
-        descricao: "O condor é uma ave de rapina de grande porte, encontrada na América do Norte e do Sul. Sua alimentação é composta por carniça, e é uma das aves com maior envergadura de asas, podendo alcançar até 3 metros." 
     },
     { 
         id: "61", 
