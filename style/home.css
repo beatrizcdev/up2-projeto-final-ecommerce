@@ -49,7 +49,7 @@
     display: none;
     position: fixed;
     right: 20px; 
-    bottom: 80px;
+    bottom: 250px;
     justify-content: center;
     align-items: center;
     border-radius: 50%; 
@@ -74,7 +74,7 @@
 .whatsapp {
     position: fixed;
     right: 20px;
-    bottom: 20px;
+    bottom: 190px;
     width: 60px;
     height: 60px;
     display: flex;
@@ -118,6 +118,7 @@
         width: 42px;
         height: 40px;
         box-shadow: none;
+        bottom: 40px;
     }
 
     #voltarAoTopo img{
@@ -126,7 +127,7 @@
     }
 
     .voltarAoTopo {
-        bottom: 60px;
+        bottom: 80px;
     }
 
 }

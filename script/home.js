@@ -24,6 +24,7 @@ function injetarFooter(){
     </div>
 
     <div class="infos-footer">
+        <div class="footer-organizacao">
       <div class="contatos-footer">
         <h3>Contatos</h3>
         <ul class="contatos">
@@ -52,6 +53,7 @@ function injetarFooter(){
           <img src="./imagens/paginas-botao-whatsapp.svg" alt="">
           <img src="./imagens/logo-instagram.svg" alt="">
           <img src="./imagens/logo-facebook.svg" alt="">
+        </div>
         </div>
       </div>
     </div>
