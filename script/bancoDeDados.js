@@ -5,7 +5,7 @@ const produtos = [
         preco: 120, 
         categoria: "Cágados", 
         tipo: "animal", 
-        imagem: '../imagens/bancoDeDados-id-1.svg', 
+        imagem: 'https://beatrizcdev.github.io/up2-projeto-final-ecommerce/imagens/bancoDeDados-id-1.svg', 
         descricao: "O Cágado-de-pente é um réptil herbívoro que se alimenta de plantas aquáticas e algas. Ele vive em rios e lagos de água doce, sendo encontrado em regiões com clima tropical e subtropical. Seu habitat natural é composto por águas tranquilas e vegetação aquática densa. Esse cágado é adaptado ao clima quente e úmido, podendo passar bastante tempo submerso nas águas." 
     },
     { 
@@ -358,7 +358,7 @@ const produtos = [
         preco: 12, 
         categoria: "Aves", 
         tipo: "comida", 
-        imagem: '../imagens/bancoDeDados-id-66.svg', 
+        imagem: 'https://beatrizcdev.github.io/up2-projeto-final-ecommerce/imagens/bancoDeDados-id-66.svg', 
         descricao: "Mistura de sementes, ideal para aves como canário e periquito australiano." 
     },
     { 
