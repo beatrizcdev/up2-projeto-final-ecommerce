@@ -90,6 +90,8 @@
 
 .carrinho_section_baseProduto{
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #carrinho_imagem_produto{
@@ -205,4 +207,46 @@
     text-align: center;
     margin-top: 120px;
     cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    #carrinho_modal{
+        width: 80%;
+        font-size: 15px;
+    }
+
+    #carrinho_finalizarCompra button{
+        width: 80%;
+        font-size: 20px;
+    }
+
+    .carrinho_container{
+        padding-top: 0;
+    }
+
+    .carrinho_main{
+        padding-top: 0;
+        margin-bottom: 0;
+    }
+
+    .carrinho_valorProduto{
+        padding: 0;
+    }
+
+    .carrinho_lixeira img{
+        height: 30px;
+    }
+
+    .carrinho_section_baseProduto{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .carrinho_produtoDescricao p{
+        margin-top: 0;
+    }
+
+    .carrinho_valorProduto h2{
+        font-size: 20px;
+    }
 }
