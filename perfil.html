@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>Perfil</title>
+</head>
+<body class="perfil-body">
+    <header>
+        <a href="./index.html"><img src="./imagens/mundo-exotico-logotipo.svg" alt="logo" class="logotipo" width="20px"></a>
+
+        <nav>
+            <ul>
+                <a href="./animais.html?tipo=animal"><li><i class="fas fa-paw"></i><span class="texto"> Animais</span></li></a>
+                <a href="./animais.html?categoria=Suprimentos"><li><i class="fas fa-box"></i><span class="texto">Suprimentos</span></li></a>
+                <a href="./suporte.html"><li><i class="fas fa-question-circle"></i><span class="texto">Suporte</span></li></a>
+            </ul>
+        </nav>
+
+        <div class="opcoes-extra">
+            <a href="./perfil.html"><img src="./imagens/header-perfil.svg" alt="perfil" class="opcoes-extra"></a>
+            <button id="carrinho_open" style="background: none;"> 
+                <a href="javascript:void(0)" class="link__quantity">
+                    <img src="./imagens/header-carrinho.svg" class="opcoes-extra"></a>
+                </a>
+                </button>
+                <div id="fade" class="hide"></div>
+                <div id="carrinho_modal" class="hide">
+                  <div class="carrinho_header">
+                    <h2 id="carrinho_title">Seu carrinho</h2>
+                    <img src="./imagens/X.svg" alt="" class="carrinho_out">
+                  </div>
+                  <div class="carrinho_container">
+                  <div class="carrinho_main">
+                    <p id="carrinho_quantidadeItens">0 ítens</p>
+                    <button style="background: none;" class="carrinho_excluirTudo">Excluir tudo</button>
+                  </div>
+                  <div class="carrinho_section">
+                    <div class="carrinho_section_parte1">
+                      <div class="carrinho_section_baseProduto">
+                        <img src="#" alt="" id="carrinho_imagem_produto">
+                        <div class="carrinho_produtoDescricao">
+                          <p>Nome do produto</p>
+                          <div class="carrinho_tag">
+                            <span class="carrinho_produtoTagTexto">Vegano</span>
+                          </div>
+                        </div>
+                      </div>
+                        <button type="button" class="carrinho_lixeira">
+                          <img src="./imagens/Trash.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="carrinho_valorProduto">
+                      <h2 id="carrinho_preco_produto">R$ 0,00</h2>
+                      <div class="carrinho_seletorDeQuantidade">
+                        <button class="btn-minus"><img src="./imagens/Minus.svg" alt=""></button>
+                        <span id="carrinho_produto_quantidade">1</span>
+                        <button class="btn-plus">
+                        <img src="./imagens/Plus.svg" alt="">
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                  <div class="carrinho_footer">
+                    <div class="carrinho_tiposValores">
+                      <div id="carrinho_subtotal">
+                        <p>Subtotal</p>
+                        <span>R$ 0,00</span>
+                      </div>
+                      <div id="carrinho_entrega">
+                        <p>Entrega</p>
+                        <span>R$ 0,00</span>
+                      </div>
+                      <div id="carrinho_total">
+                        <p>Total</p>
+                        <span>R$ 0,00</span>
+                      </div>
+                    </div>
+                    <div id="carrinho_finalizarCompra">
+                      <button class="carrinho_finalizarCompra">Finalizar compra</button>
+                    </div>
+                  </div>
+                </div>
+            
+        </div>
+    </header>
+  <main class="perfil-main">
+    <h1 class="perfil-title">Sua conta</h1>
+        <div class="perfil-container">
+            <div class="perfil-grid-container">
+                <div class="card">
+                    <img src="./imagens/Lupa.svg.svg" alt="Ícone de pedidos">
+                    <h2>Seus pedidos</h2>
+                    <p>Rastrear, devolver ou comprar produtos novamente</p>
+                </div>
+                <div class="card">
+                    <img src="./imagens/Segurança.svg" alt="Ícone de segurança">
+                    <h2>Acesso e segurança</h2>
+                    <p>Gerenciar senha, e-mail, CPF e número de celular</p>
+                </div>
+                <div class="card">
+                    <img src="./imagens/Endereço.svg" alt="Ícone de endereços">
+                    <h2>Seus endereços</h2>
+                    <p>Alterar endereços para pedidos</p>
+                </div>
+                <div class="card">
+                    <img src="./imagens/Carteira.svg" alt="Ícone de pagamentos">
+                    <h2>Seus pagamentos</h2>
+                    <p>Gerenciar ou adicionar formas de pagamento e ver suas transações</p>
+                </div>
+                <div class="card">
+                    <img src="./imagens/Ouvidoria.svg" alt="Ícone de atendimento">
+                    <h2>Atendimento ao Cliente</h2>
+                    <p>Explorar opções de autoatendimento, artigos de ajuda ou fale conosco</p>
+                </div>
+                <div class="card">
+                    <img src="./imagens/SuaLista.svg" alt="Ícone de listas">
+                    <h2>Suas Listas</h2>
+                    <p>Gerenciar, compartilhar, ou criar listas de desejos</p>
+                </div>
+                <div class="card">
+                    <img src="./imagens/SuporteDispositivos.svg" alt="Ícone de serviços digitais">
+                    <h2>Serviços digitais e suporte a dispositivos</h2>
+                    <p>Solucione problemas com dispositivos, gerencie ou cancele assinaturas digitais</p>
+                </div>
+            </div>
+        </div>
+  </main>
+  <button id="voltarAoTopo" class="voltarAoTopo" title="Voltar ao topo"><img src="./imagens/paginas-botao-voltar-ao-topo.svg" alt=""></button>
+
+  <footer class="footer">
+    <!--injetar o footer aqui-->
+  </footer>
+  <script type="module" src="./script/perfil.js"></script>
+  <script type="module" src="./script/carrinho.js"></script>
+</body>
+</html>
