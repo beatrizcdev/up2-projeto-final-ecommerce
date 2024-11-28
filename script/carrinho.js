@@ -9,6 +9,18 @@ window.addEventListener('load', function() {
 
 //abrir e fechar o modal
 const toggleModal = () =>{
+
+  const isModalOpen = !modal.classList.contains("hide"); 
+
+    if (isModalOpen) {
+        console.log("O carrinho está aberto!");
+        const whatsapp = document.querySelector(".whatsapp");
+        whatsapp.style.display = 'block'
+    } else {
+        console.log("O carrinho está fechado!");
+        const whatsapp = document.querySelector(".whatsapp");
+        whatsapp.style.display = 'none'
+    }
     modal.classList.toggle("hide");
     fade.classList.toggle("hide");
 }
