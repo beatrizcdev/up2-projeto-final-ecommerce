@@ -11,18 +11,20 @@ window.addEventListener('load', function() {
 const toggleModal = () =>{
 
   const isModalOpen = !modal.classList.contains("hide"); 
+  const whatsapp = document.querySelector(".whatsapp");
+        const voltarAoTopo = document.querySelector(".voltarAoTopo");
 
     if (isModalOpen) {
         console.log("O carrinho está aberto!");
-        const whatsapp = document.querySelector(".whatsapp");
         if(whatsapp){
           whatsapp.style.display = 'block';
+          voltarAoTopo.style.display = 'block';
         }
     } else {
         console.log("O carrinho está fechado!");
-        const whatsapp = document.querySelector(".whatsapp");
         if(whatsapp){
           whatsapp.style.display = 'none';
+          voltarAoTopo.style.display = 'none';
         }
     }
     modal.classList.toggle("hide");
